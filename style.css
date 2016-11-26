@@ -1,21 +1,25 @@
 body{
-  width:800px;
-  margin:auto;
+  margin:0px;
   padding:0px;
   background-color:#323232;
 }
-nav{
-  width:inherit;
-  height:20px;
+/* Navigation Bar Wrapper */
+.navBar{
+  float:left;
   position:fixed;
+  width:100%;
+  background-color:#111;
+}
+/* Nav Bar */
+nav{
+  width:960px;
+  height:20px;
   margin:auto;
   padding:10px;
-  background-color:#111;
 }
 nav a{
   margin:0px;
-  padding:0px;
-  padding-right:5px;
+  padding:0px 5px;
   text-decoration:none;
   color:#f2f2f2;
   font-weight:bold;
@@ -23,8 +27,9 @@ nav a{
 nav a:hover{
   color:#ff3333;
 }
+/* Header Wrapper */
 header{
-  width:inherit;
+  width:960px;
   height:auto;
   margin:auto;
   padding:10px;
@@ -36,64 +41,54 @@ header h1{
   margin:0px;
   padding:10px;
   padding-left:0px;
-  font-size:2.5em
+  font-size:3.2em
 }
+/* Main Content Wrapper */
 main{
-  width:800px;
-  height:100%;
+  width:960px;
   margin:auto;
   padding:10px;
   background-color:#f2f2f2;
 }
+/* Content Division Wrappers */
 section{
-  display:inline-block;
-  width:inherit;
-}
-.about h2{
-  widht:inherit;
-}
-.about a{
-  float:right;
-  padding:5px;
-  text-decoration:none;
-  font-size:12px;
-  color:#3333ff;
-}
-
-.split{
-  float:left;
-  display:inline-block;
-  width:400px;
+  width:940px;
   margin:0px;
   padding:0px;
 }
-h3{
-  background-color:#f2f2f2;
-  border:2px solid #111;
-  border-bottom:none;
+/* Content Headers */
+h2{
+  width:inherit;
+  margin:0px;
+  padding:0px;
 }
+/* Instructions Wrapper */
+.instructions{
+  float:left;
+  min-width:50%;
+}
+.instructions p{
+  margin:2px 0px;
+  padding:5px 0px;
+}
+/* Manobs References Wrapper */
+.manobs{
+  float:left;
+  width:inherit;
+}
+/* Calculator Wrapper */
+.calculator{
+  float:left;
+  clear:none;
+  margin:0px;
+  margin-right:10px;
+  padding:0px;
+}
+/* Horizontal Divider */
 hr{
   float:left;
   clear:both;
   width:100%;
-}
-/*------Navigation Tag Style------*/
-.tag{
-  width:80px;
-  margin:0px;
-  margin-left:-90px;
-  padding:5px;
-  background-color:#f2f2f2;
-  border:2px solid #111;
-  border-right:none;
-  text-align:center;
-}
-.tagText{
-  display:inline-block;
-}
-.tagText a{
-  text-decoration:none;
-  color:#111;
 }
 /*------Form Layout Style------*/
 form{
@@ -102,25 +97,36 @@ form{
   padding:10px;
   border:2px solid #111;
 }
-.container{
+form .container{
   float:left;
   clear: both;
   width:auto;
   margin:0px;
   padding:5px;
 }
-.prdInput{
+form .label{
+  float:left;
+  margin:0px;
+  padding:5px;
+  padding-left:0px;
+  display:inline-block;
+}
+form p, form h4{
+  margin:0px;
+  padding:0px;
+}
+form .prdInput{
   clear:left;
 }
-.prdInput td, .prdInput input{
+form .prdInput td, form .prdInput input{
   margin:0px;
   padding:2px;
   text-align:center;
 }
-.prdInput input{
+form .prdInput input{
   width:50px;
 }
-.chkbx-container{
+form .chkbx-container{
   width:230px;  
   margin:0px;
   padding:0px;  
@@ -128,30 +134,19 @@ form{
   color: #c2c2c2;  
   border-radius: 5px;
 }
-.chkbx{
+form .chkbx{
   width:20px;
   height:20px;
   margin:20px 5px;
 }
-.chkbx-container p{
+form .chkbx-container p{
   float:right;
   max-width:180;
   margin:0px;
   padding:10px 5px;
 }
-span{
+form span{
   margin-top:0px;
   font-size:18px;
   font-weight:bold;
-}
-/*------Error Style------*/
-.error{
-  float:left;
-  clear:left;
-  width:234px;
-  height:249.5px;
-  margin:0px;
-  padding:10px;
-  border:2px solid #111;
-  border-radius: 0px 5px 5px 5px;
 }
