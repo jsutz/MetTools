@@ -6,14 +6,13 @@
 
 <body>
   <!- Fixed Navigation Bar ->
-  <nav>
-    <a href="#about">About</a>
-    <a href="#">Instructions</a>
-    <a href="#">Calculator</a>
-    <a href="#">References</a>
-    <a href="#">Contact</a>
-  </nav>
-
+  <div class="navBar">
+    <nav>
+      <a href="">Home</a>
+      <a href="calculator.html">Calculator</a>
+    </nav>
+  </div>
+  
   <!- Page Header ->
   <header>
     <h1>RtDc Calculator</h1><hr>
@@ -21,15 +20,14 @@
   
   <main>    
     <!- Welcome Container ->
-    <section id="about" class="about">
-      <h2>About This Application: <a href="#">[HIDE]</a> </h2>
-      <p>Welcome and thank you for using the 909:RtDc Calculator.</p>
+    <section class="about">
       <p>This tool was originally created to aid technicians with the 
-      calculation of Rt and Dc - the start, stop and duration of precipitation -
-      at weather stations still recording synoptic observations.</p>
+      calculation of Rt and Dc - the time at which precipitation, given by RRR,
+      began or ended along with the duration and character - at weather stations 
+      still recording synoptic observations.</p>
       <p>This tool is to be used as an aid only and it is highly recommended 
       that technicians still calculate Rt and Dc codes manually using the table 
-      provided in MANOBS.</p>
+      provided in MANOBS and for convenience, <a href=calculator.html#manobs>here.</a></p>
       <p>On that note: the program has undergone months of testing and has been 
       in operation for roughly six months now without error.</p>
       <p>If any errors, or bugs are found or you have ideas to help make the 
@@ -37,87 +35,6 @@
       form provided at the bottom of the site.</p>
       <br>
       <p>Dev Notes: Make collapsable.</p><hr> 
-    </section>
-    
-    <!- Welcome Container ->
-    <section id="instructions" class="about">
-      <h2>How To Use: <a href="#">[HIDE]</a> </h2>
-      <p>Add: Instruction for usage of program.</p>
-      <br>
-      <p>Dev Notes: Make collapsable.</p><hr> 
-    </section>
-    
-    <!- Form ->
-    <section>     
-      <div class="split">
-        <h3>Calculator</h3>  
-        <form action="" method="post" name="formRtdc">
-        
-          <div class="container">
-            <p class="label">Periods:</p> 
-            <select id="numPeriods" onchange="showLastPeriod(this)">
-              <option value=""></option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-            </select>
-          </div>
-
-          <div class="container">
-            <h4>First Period</h4>
-            <table class="prdInput">
-              <tr>
-                <td>Start:</td>
-                <td><input type="text" maxlength="4" onchange="checkText(this)"></td>
-                <td>|</td>
-                <td>End:</td>
-                <td><input type="text" maxlength="4" onchange="checkText(this)"></td>
-              </tr>
-            </table>
-          </div>
-        
-          <div class="container chkbx-container">
-            <input class="chkbx" type="checkbox">
-            <p>Period started more than 24 hours ago.</p>
-          </div>
-        
-          <div id="lastPeriod" class="container hidden">
-            <h4>Last Period</h4>
-            <table class="prdInput">
-              <tr>
-                <td>Start:</td>
-                <td><input type="text" maxlength="4" onchange="checkText(this)"></td>
-                <td>|</td>
-                <td>End:</td>
-                <td><input type="text" maxlength="4" onchange="checkText(this)"></td>
-              </tr>
-            </table>
-          </div>
-        
-          <hr>
-        
-          <div class="container buttonContainer">
-            <p class="label">909:</p>
-            <p class="label"><span>0 0</span></p>
-            <input class='button' type='submit' value='Submit'>
-            <input class='button' type='reset' value='Clear'>
-          </div>        
-        </form>
-      </div>  
-      
-      <div class="split">
-        <!-Error Container->
-        <div>
-          <h3>Errors</h3>
-          <p>Error Container</p>
-        </div>
-      <div>
-      <hr>
-    </section>
-    
-    <section>
-      <h3>Manobs References</h3>
-      <p>List Manobs References to Rtdc/909.</p>
-      <p>Also: Display table for manual calculation of RtDc.</p>
     </section>
   </main>
 </body>
