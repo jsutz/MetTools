@@ -91,15 +91,29 @@ main{
   min-height:100px;
   margin-top:10px;
 }
-.rtdcTable tr{margin:0px;
-   padding:0px;}
-.rtdcTable td{margin:0px;
-   padding:0px 10px;
-   border:1px solid black;}
+.rtdcTable table{
+  margin:5px auto;
+  padding:0px;
+}
+.rtdcTable tr{
+  margin:0px;
+  padding:0px;
+}
+.rtdcTable td{
+  margin:0px;
+  padding:0px 10px;
+  border:1px solid black;
+}
 
-.noborder{border:none;}
-.noTopBorder{border-top:none;}
-.noBottomBorder{border-bottom:none;}
+.noborder{
+  border:none;
+}
+.noTopBorder{
+  border-top:none;
+}
+.noBottomBorder{
+  border-bottom:none;
+}
 
 .references{
   float:left;
