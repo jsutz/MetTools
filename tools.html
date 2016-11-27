@@ -130,6 +130,67 @@
       <h2>RtDc Calculation Table</h2>
       <hr>
       <p>Provide calculation table for convenience of manual checks.</p>
+        <table>
+          <tr>
+            <td class="noborder"></td>
+            <td class="noborder"></td>
+            <td>Precip At Ob Time<br>
+                Or Within Last Hour</td>
+            <td>No Precip At Ob Time<br>
+                Or Within Last Hour</td>
+            <td class="noborder"></td>
+          </tr>
+          <tr>
+            <td>Rt</td>
+            <td>1<br>Period</td>
+            <td>Time Precip Began</td>
+            <td>Time Precip Ended</td>
+            <td class="noBottomBorder">0 - not used<br>
+                1 - 1hr or less<br>
+                2 - +1 to 2hrs<br>
+                3 - +2 to 3hrs<br>
+                4 - +3 to 4hrs<br>
+            </td>
+          </tr>
+          <tr>
+            <td class="noborder"></td>
+            <td>2+<br>Periods</td>
+            <td>Time Last Period Began</td>
+            <td>Time Last Period Ended<br>
+                to Ob Time</td>
+            <td class="noTopBorder">5 - +4 to 5hrs<br>
+                6 - +5 to 6hrs<br>
+                7 - +6 to 12hrs<br>
+                8 - +12hrs<br>
+                9 - unknown</td>
+          </tr>
+
+          <tr>
+            <td>Dc</td>
+            <td>1<br>Period</td>
+            <td>Time Precip Began To<br>
+                Time Precip Ended, or Ob Time</td>
+            <td>Time Precip Began To<br>
+                Time Precip Ended</td>
+            <td>0 - 1hr or less<br>
+                1 - +1 to 3hrs<br>
+                2 - +3 to 6hrs<br>
+                3 - +6hrs<br>
+            </td>
+          </tr>
+          <tr>
+            <td class="noborder"></td>
+            <td>2+<br>Periods</td>
+            <td>Time First Period Began To<br>
+                Time Time Precip Ended, or Ob Time</td>
+            <td>Time First Period Began To<br>
+                Time Last Period Ended</td>
+            <td>4 - + 1hr or less<br>
+                5 - +1 to 3hrs<br>
+                6 - +3 to 6hrs<br>
+                7 - +6hrs<br>
+          </tr>
+        </table>
     </div>
 
     <div class="references">
