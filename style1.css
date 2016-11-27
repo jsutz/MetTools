@@ -84,15 +84,22 @@ main{
   height:415px;
   margin-top:10px;
 }
+
+.rtdcTable{
+  float:left;
+  width:1020px;
+  min-height:100px;
+  margin-top:10px;
+}
 .references{
   float:left;
   width:1020px;
   margin:10px 0px;
 }
-.about, .aboutRtdc, .rtdcForm, .instructions, .references{
+.about, .aboutRtdc, .rtdcForm, .instructions, .rtdcTable, .references{
   background-color:#fff;
 }
-.about p, .aboutRtdc p, .instructions p, .references p{
+.about p, .aboutRtdc p, .instructions p, .rtdcTable p, .references p{
   margin:10px;
 }
 
