@@ -64,6 +64,13 @@ main{
   margin:10px 0px;
 }
 
+.aboutRtdc{
+  float:left;
+  width:1020px;
+  min-height:100px;
+  margin-top:10px;
+}
+
 .rtdcForm{
   float:left;
   width:277px;
@@ -82,10 +89,10 @@ main{
   width:1020px;
   margin:10px 0px;
 }
-.about, .rtdcForm, .instructions, .references{
+.about, .aboutRtdc, .rtdcForm, .instructions, .references{
   background-color:#fff;
 }
-.about p, .instructions p, .references p{
+.about p, .aboutRtdc p, .instructions p, .references p{
   margin:10px;
 }
 
