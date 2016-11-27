@@ -1,0 +1,67 @@
+/*------Form Layout Style------*/
+form{
+  float:left;
+  clear:left;
+  margin:10px;
+  padding:10px;
+  border:2px solid #111;
+}
+form .container{
+  float:left;
+  clear: both;
+  width:auto;
+  margin:0px;
+  padding:5px;
+}
+form .label{
+  float:left;
+  margin:0px;
+  padding:5px;
+  padding-left:0px;
+  display:inline-block;
+}
+form p, form h4{
+  margin:0px;
+  padding:0px;
+}
+form .prdInput{
+  clear:left;
+}
+form .prdInput td, form .prdInput input{
+  margin:0px;
+  padding:2px;
+  text-align:center;
+}
+form .prdInput input{
+  width:50px;
+}
+form .chkbx-container{
+  width:230px;
+  margin:0px;
+  padding:0px;
+  background-color: #525252;
+  color: #c2c2c2;
+  border-radius: 5px;
+}
+form .chkbx{
+  width:20px;
+  height:20px;
+  margin:20px 5px;
+}
+form .chkbx-container p{
+  float:right;
+  max-width:180;
+  margin:0px;
+  padding:10px 5px;
+}
+form span{
+  margin-top:0px;
+  font-size:18px;
+  font-weight:bold;
+}
+.buttonContainer{
+  width:230px;
+}
+.button{
+  float:right;
+}
