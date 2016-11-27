@@ -67,14 +67,14 @@ main{
 .rtdcForm{
   float:left;
   width:277px;
-  height:410px;
+  height:415px;
   margin-top:10px;
   margin-right:10px;
 }
 .instructions{
   float:left;
   width:733px;
-  height:410px;
+  height:415px;
   margin-top:10px;
 }
 .references{
@@ -93,7 +93,6 @@ h2{
   height:28px;
   margin:2px 10px;
   padding:0px;
-  border-bottom:2px solid #111;
 }
 
 /* -- Page Footer -- */
