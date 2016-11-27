@@ -1,4 +1,8 @@
 <head>
+  <title>RtDc Code Calculator</title>
+  <script src='scripts.js' type='text/javascript'></script>  
+  <link href='style.css' type='text/css' rel='stylesheet'>
+  
   <style>
     .resources{
       width:777px;
@@ -36,68 +40,83 @@
   </style>
 </head>
 
-<main>
-  <h3>Meteorology Websites</h3>
-  <div class="resources">
-    <ul>
-      <a href="https://met.forces.gc.ca/" target="_blank">CF Weather Office</a>
-      <a href="http://flightplanning.navcan.ca" target="_blank">Nav Canada: Flight Planning and Weather</a>
-      <a href="www.metcam.navcanada.ca/" target="_blank">Nav Canada: Met Cameras</a>
-      <a href="https://plan.navcanada.ca/" target="_blank">Nav Canada: CFPS</a>
-      <a href="http://www.noaa.gov" target="_blank">NOAA Weather</a>
-      <a href="https://weather.gc.ca/canada_e.html" target="_blank">Government of Canada: Weather</a>
-      <a href="https://weather.gc.ca/radar/index_e.html" target="_blank">Government of Canada: Radar</a>
-      <a href="https://weather.gc.ca/satellite/index_e.html" target="_blank">Government of Canada: Satellite</a>
-      <a href="https://weather.gc.ca/warnings/index_e.html" target="_blank">Government of Canada: Public Alerts</a>
-      <a href="http://www.accuweather.com/" target="_blank">AccuWeather</a>
-      <a href="http://www.accuweather.com/en/ca/national/weather-radar" target="_blank">AccuWeather: Radar</a>
-      <a href="http://www.accuweather.com/en/ca/national/satellite" target="_blank">AccuWeather: Satellite</a>
-    </ul>
+<body>
+  <!- Fixed Navigation Bar ->
+  <div class="navBar">
+    <nav>
+      <a href="">Home</a>
+      <a href="calculator.html">Calculator</a>
+    </nav>
   </div>
-  <hr>
   
-  <h3>Interactive Weather Maps</h3>
-  <div class="resources">
-    <ul>
-      <a href="http://www.intellicast.com/Local/WxMap.aspx" target="_blank">Intellicast</a>
-      <a href="http://www.wunderground.com/" target="_blank">Weather Underground</a>
-    </ul>
-  </div>
-  <hr>
-  
-  <h3>Meteorology Courses</h3>
-  <div class="resources">
-    <a href="#" target="_blank"></a>
-  </div>
-  <hr>
-  
-  <h3>Climate Data Websites</h3>
-  <div class="resources">
-    <a href="#" target="_blank"></a>
-  </div>
-  <hr>
-  
-  <h3>Publicactions</h3>
-  <div class="resources">
-    <p>Manual of Surface Weather Observations [MANOBS] - 
-      <a href="https://www.ec.gc.ca/manobs/default.asp?lang=En&n=B6F4CF69-1" target="_blank">[WEB]</a>
-      <a href="https://www.ec.gc.ca/manobs/73BC3152-E142-4AEE-AC7D-CF30DAFF9F70/MANOBS_7E-A19_Eng_web.pdf" target="_blank">[PDF]</a>
-    </p>
-    <p>Manual of Word Abreviations [MANABS] - 
-      <a href="https://www.ec.gc.ca/manab/default.asp?lang=En&n=ADEDA910-1" target="_blank">[WEB]</a>
-      <a href="https://www.ec.gc.ca/manab/FF340370-81D3-4B5D-A2C1-E25AC6342937/MANAB.pdf" target="_blank">[PDF]</a>
-    </p>
-    <p>Manual of Standards and Procedures for Aviation Weather Forecasts [MANAIR] - 
-      <a href="http://ec.gc.ca/manair/default.asp?lang=En&n=E090AC01-1" target="_blank">[WEB]</a>
-      <a href="http://ec.gc.ca/manair/E090AC01-C2AF-4A93-B852-9BFF0CA808F2/MANAIR_7E-A01_English.pdf" target="_blank">[PDF]</a>
-    </p>
-    <p>Manual of Climatological Observations [MANCLIM] - 
-      <a href="https://www.ec.gc.ca/manclim/default.asp?lang=En&n=1A596C5D-1" target="_blank">[WEB]</a>
-      <a href="https://www.ec.gc.ca/manclim/F2655F2E-665E-49A2-836B-24B6B8DFBD63/MANCLIM_4E_E.pdf" target="_blank">[PDF]</a>
-    </p>
-    <a href="https://www.ec.gc.ca/meteo-weather/default.asp?lang=En&n=35C981B2-1" target="_blank">Environment And Climate Change Publications</a>  
-    <a href="https://www.ec.gc.ca/meteo-weather/default.asp?lang=En&n=FB53207A-1" target="_blank">Aviation Weather Observing Bulletins [AVOBS]</a>
-    <a href="http://www.navcanada.ca/EN/media/Publications/AWS-Guide-EN.pdf" target="_blank">Nav Canada: Aviation Weather Services Guide</a>
-  </div>
-  <hr>
-</main>
+  <!- Page Header ->
+  <header>
+    <h1>RtDc Calculator</h1><hr>
+  </header>
+
+  <main>
+    <h3>Meteorology Websites</h3>
+    <div class="resources">
+      <ul>
+        <a href="https://met.forces.gc.ca/" target="_blank">CF Weather Office</a>
+        <a href="http://flightplanning.navcan.ca" target="_blank">Nav Canada: Flight Planning and Weather</a>
+        <a href="www.metcam.navcanada.ca/" target="_blank">Nav Canada: Met Cameras</a>
+        <a href="https://plan.navcanada.ca/" target="_blank">Nav Canada: CFPS</a>
+        <a href="http://www.noaa.gov" target="_blank">NOAA Weather</a>
+        <a href="https://weather.gc.ca/canada_e.html" target="_blank">Government of Canada: Weather</a>
+        <a href="https://weather.gc.ca/radar/index_e.html" target="_blank">Government of Canada: Radar</a>
+        <a href="https://weather.gc.ca/satellite/index_e.html" target="_blank">Government of Canada: Satellite</a>
+        <a href="https://weather.gc.ca/warnings/index_e.html" target="_blank">Government of Canada: Public Alerts</a>
+        <a href="http://www.accuweather.com/" target="_blank">AccuWeather</a>
+        <a href="http://www.accuweather.com/en/ca/national/weather-radar" target="_blank">AccuWeather: Radar</a>
+        <a href="http://www.accuweather.com/en/ca/national/satellite" target="_blank">AccuWeather: Satellite</a>
+      </ul>
+    </div>
+    <hr>
+
+    <h3>Interactive Weather Maps</h3>
+    <div class="resources">
+      <ul>
+        <a href="http://www.intellicast.com/Local/WxMap.aspx" target="_blank">Intellicast</a>
+        <a href="http://www.wunderground.com/" target="_blank">Weather Underground</a>
+      </ul>
+    </div>
+    <hr>
+
+    <h3>Meteorology Courses</h3>
+    <div class="resources">
+      <a href="#" target="_blank"></a>
+    </div>
+    <hr>
+
+    <h3>Climate Data Websites</h3>
+    <div class="resources">
+      <a href="#" target="_blank"></a>
+    </div>
+    <hr>
+
+    <h3>Publicactions</h3>
+    <div class="resources">
+      <p>Manual of Surface Weather Observations [MANOBS] - 
+        <a href="https://www.ec.gc.ca/manobs/default.asp?lang=En&n=B6F4CF69-1" target="_blank">[WEB]</a>
+        <a href="https://www.ec.gc.ca/manobs/73BC3152-E142-4AEE-AC7D-CF30DAFF9F70/MANOBS_7E-A19_Eng_web.pdf" target="_blank">[PDF]</a>
+      </p>
+      <p>Manual of Word Abreviations [MANABS] - 
+        <a href="https://www.ec.gc.ca/manab/default.asp?lang=En&n=ADEDA910-1" target="_blank">[WEB]</a>
+        <a href="https://www.ec.gc.ca/manab/FF340370-81D3-4B5D-A2C1-E25AC6342937/MANAB.pdf" target="_blank">[PDF]</a>
+      </p>
+      <p>Manual of Standards and Procedures for Aviation Weather Forecasts [MANAIR] - 
+        <a href="http://ec.gc.ca/manair/default.asp?lang=En&n=E090AC01-1" target="_blank">[WEB]</a>
+        <a href="http://ec.gc.ca/manair/E090AC01-C2AF-4A93-B852-9BFF0CA808F2/MANAIR_7E-A01_English.pdf" target="_blank">[PDF]</a>
+      </p>
+      <p>Manual of Climatological Observations [MANCLIM] - 
+        <a href="https://www.ec.gc.ca/manclim/default.asp?lang=En&n=1A596C5D-1" target="_blank">[WEB]</a>
+        <a href="https://www.ec.gc.ca/manclim/F2655F2E-665E-49A2-836B-24B6B8DFBD63/MANCLIM_4E_E.pdf" target="_blank">[PDF]</a>
+      </p>
+      <a href="https://www.ec.gc.ca/meteo-weather/default.asp?lang=En&n=35C981B2-1" target="_blank">Environment And Climate Change Publications</a>  
+      <a href="https://www.ec.gc.ca/meteo-weather/default.asp?lang=En&n=FB53207A-1" target="_blank">Aviation Weather Observing Bulletins [AVOBS]</a>
+      <a href="http://www.navcanada.ca/EN/media/Publications/AWS-Guide-EN.pdf" target="_blank">Nav Canada: Aviation Weather Services Guide</a>
+    </div>
+    <hr>
+  </main>
+</body>
