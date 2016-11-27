@@ -94,6 +94,7 @@ main{
 .rtdcTable table{
   margin:5px auto;
   padding:0px;
+  background-color:#111;
 }
 .rtdcTable tr{
   margin:0px;
@@ -102,17 +103,7 @@ main{
 .rtdcTable td{
   margin:0px;
   padding:0px 10px;
-  border:1px solid black;
-}
-
-.noborder{
-  border:none;
-}
-.noTopBorder{
-  border-top:none;
-}
-.noBottomBorder{
-  border-bottom:none;
+  border:1px solid #111;
 }
 
 .references{
