@@ -103,7 +103,8 @@ main{
 .rtdcTable td{
   margin:0px;
   padding:0px 10px;
-  border:1px solid #111;
+  background-color:#f2f2f2;
+  color:#111;
 }
 
 .references{
