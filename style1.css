@@ -112,10 +112,17 @@ main{
   width:1020px;
   margin:10px 0px;
 }
-.about, .aboutRtdc, .rtdcForm, .instructions, .rtdcTable, .references{
+
+.resources{
+  float:left;
+  width:1020px;
+  margin:10px 0px;
+}
+
+.about, .aboutRtdc, .rtdcForm, .instructions, .rtdcTable, .references, .resources{
   background-color:#fff;
 }
-.about p, .aboutRtdc p, .instructions p, .rtdcTable p, .references p{
+.about p, .aboutRtdc p, .instructions p, .rtdcTable p, .references p, .resources p{
   margin:10px;
 }
 
