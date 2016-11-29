@@ -1,0 +1,125 @@
+.rtdcForm{
+  float:left;
+  width:274px;
+  height:410px;
+  margin-top:10px;
+  margin-right:10px;
+}
+.instructions{
+  float:left;
+  width:736px;
+  height:410px;
+  margin-top:10px;
+}
+.references{
+  float:left;
+  width:1020px;
+  margin:10px 0px;
+}
+.rtdcForm, .instructions, .references{
+  background-color:#fff;
+}
+.instructions p, .references p{
+  margin:10px;
+}
+
+/* RtDc Calculation Table */
+.rtdcTable{
+  float:left;
+  width:1020px;
+  min-height:100px;
+  margin-top:10px;
+}
+.rtdcTable table{
+  margin:5px auto;
+  padding:0px;
+  border:4px solid #111;
+}
+.rtdcTable tr{
+  margin:0px;
+  padding:0px;
+}
+.rtdcTable td{
+  margin:0px;
+  padding:0px 10px;
+  border:1px solid #111;
+  color:#111;
+}
+
+/*------Form Layout Style------*/
+form{
+  width:250px;
+  margin:30px 10px;
+  padding:5px 0px;
+  border:2px solid #111;
+}
+form .container{
+  clear:left;
+  width:230px;
+  margin:5px 10px;
+  padding:0px;
+}
+form .label{
+  float:left;
+  display:inline-block;
+}
+form select{
+  float:right;
+}
+form p, form h4, .label{
+  display:inline-block;
+  margin:0px;
+  padding:0px;
+  line-height:24px;
+}
+form .prdInput{
+  clear:left;
+}
+form .prdInput td, form .prdInput input{
+  margin:0px;
+  padding:2px;
+  text-align:center;
+}
+form .prdInput input{
+  width:50px;
+}
+
+/* Check Box Wrapper */
+form .chkbx-container{
+  width:230px;
+  margin:5px 10px;
+  padding:0px;
+  background-color: #525252;
+  color: #c2c2c2;
+  border-radius: 5px;
+}
+form .chkbx{
+  width:20px;
+  height:20px;
+  margin:20px 5px;
+}
+form .chkbx-container p{
+  float:right;
+  max-width:180;
+  margin:0px;
+  padding:10px 5px;
+}
+
+/* RtDc Label and Button Wrapper */
+.bottomWrapper{
+  height:24px;
+}
+form span{
+  margin-top:0px;
+  font-size:18px;
+  font-weight:bold;
+}
+.button{
+  float:right;
+  height:24px;
+  margin-left:5px;
+}
+
+form hr{
+  margin:5px 0px;
+}
