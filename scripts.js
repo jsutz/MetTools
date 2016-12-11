@@ -128,7 +128,7 @@ function checkTimesValid()
       eFirst += 2400;
     }
     
-    if (parseInt(sFirst) >= parseInt(eFirst) && parseInt(sFirst) < parseInt(synPeriod))
+    if (parseInt(sFirst) >= parseInt(eFirst) && parseInt(sFirst) < parseInt(synoPeriod))
       e = (e + "> End of period is invalid.<br>")
   }
   // if 2 periods selected
