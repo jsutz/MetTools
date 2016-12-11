@@ -51,6 +51,7 @@ main{
   margin:20px auto;
   border:1px solid #111;
   box-shadow:0px 4px 10px 1px;
+  background-color:rgb(102,102,102);
 }
 .tools{
   width:960px;
@@ -58,6 +59,7 @@ main{
   margin:20px auto;
   border:1px solid #111;
   box-shadow:0px 4px 10px 1px;
+  background-color:rgb(102,102,102);
 }
 .resources{
   width:960px;
@@ -65,6 +67,8 @@ main{
   margin:20px auto;
   border:1px solid #111;
   box-shadow:0px 4px 10px 1px;
+  
+  background-color:rgb(102,102,102);
 }
 .construction h3, .resources h3, .tools h3{
   padding:5px;
@@ -74,14 +78,15 @@ main{
 }
 .construction p, .construction ul, .tools p{
   padding:10px;
-  background-color:rgb(102,102,102);
   color:#e2e2e2;
   font-size:16px;
   line-height:1.5;
+  background-color:rgb(102,102,102);
 }
 .construction ul{
   margin:0;
   padding:0px 50px;
+  background-color:rgb(102,102,102);
 }
 .resources p{
   display:inline-block;
@@ -218,8 +223,10 @@ hr{
 
 /* RtDc Calculation Table */
 .rtdcTable{
-  width:900px;
+  width:960px;
   min-height:100px;
+  margin:0px;
+  padding:0px;
 }
 .rtdcTable table{
   margin:20px auto;
