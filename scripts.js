@@ -165,9 +165,6 @@ function checkTimesValid()
     }
     else mm_sLast = ""+parseInt(mm_sLast)-15+"";
     
-    alert(hh_eFirst+"\n"+mm_eFirst);
-    alert(hh_sLast+"\n"+mm_sLast);
-    
     // if the break is less than 15 minutes...
     if (parseInt(mm_sLast) < parseInt(mm_eFirst) && parseInt(hh_eFirst) >= parseInt(hh_sLast))
     {
