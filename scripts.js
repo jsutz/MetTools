@@ -135,11 +135,11 @@ function checkTimesValid()
   else if (numPeriods == "2")
   {
     
-    if (parseInt(eFirst) < (parseInt(synoPeriod) - 600) || parseInt(eFirst) > parseInt(sLast))
+    if (parseInt(eFirst) < (parseInt(synoPeriod) - 600) || parseInt(eFirst) <= parseInt(sFirst))
       e = (e + "> End of first period is invalid.<br>");
-    if (parseInt(sLast) < (parseInt(synoPeriod) - 600) || parseInt(sLast) >= parseInt(eLast))
+    if (parseInt(sLast) < (parseInt(synoPeriod) - 600) || parseInt(sLast) <= parseInt(eFirst))
       e = (e + "> Start of last period is invalid.<br>");
-    if (parseInt(eLast) < (parseInt(synoPeriod) - 600) || parseInt(eLast) > parseInt(synoPeriod))
+    if (parseInt(eLast) < (parseInt(synoPeriod) - 600) || parseInt(eLast) <= parseInt(sLast) || parseInt(eLast) > parseInt(synoPeriod))
       e = (e + "> End of last period is invalid.<br>");
     
     if (checkBox)
