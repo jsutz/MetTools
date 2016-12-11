@@ -4,111 +4,100 @@
   <script src='scripts.js' type='text/javascript'></script>
 
   <link href='style.css' type='text/css' rel='stylesheet'>
-  <link href='tools.css' type='text/css' rel='stylesheet'>
 </head>
 
-<body>
-  <!-- wrapper for page header -->
-  <div class="pageHead">
+<body onLoad="checkRefresh()">
+  <!-- Fixed Navigation Bar -->
+  <div class="navMenu">
     <nav>
-      <div class="navMenu">
-        <a href="index.html">Home</a>
-        <a href="">Tools</a>
-        <a href="resources.html">Resources</a>
-      </div>
+      <a href="index.html"><span style="font-size:32px;"><b>MetTools</b></span></a>
+      <a href="">News</a>
+      <a href="">Tools</a>
+      <a href="resources.html">Resources</a>
+      <a href="">Contact</a>
     </nav>
-
-    <header>
-      <h1>Met Tools</h1>
-    </header>
   </div>
 
   <!-- wrapper for main page content -->
   <main>
-    <div class="contentWrapperFull">
-      <h2>About RtDc Calculator</h2>
-      <hr>
+    <div class="tools">
+      <h3>About RtDc Calculator</h3>
       <p>The 909:RtDc Calculator tool was created to aid Meteorological Technicians with the calculation of Rt and Dc - the time at which
         precipitation began or ended and the duration of - at weather stations still recording synoptic observations.</p>
-      <p>Also, provided below for convenience, are the related Manobs references and a simple table for the calculation of Rt and Dc.</p>
+      <p>Also, provided below for convenience, are the related Manobs references and a simple table for the manual calculation of Rt and Dc.</p>
       <p><b><i>Disclosure:</i></b> This tool is to be used as an aid only and it is highly recommended that the technician manually calculate
         the codes for Rt and Dc to ensure their correctness. That being said, the tool has undergone months of testing and operational usage,
-        error free, and can be trusted to generate the correct codes. If, however, an error is found, please contact the administrator
-        of the site using the form provided.</p>
+        error free, and although rewritten in a web language, can be trusted to generate the correct codes. 
+        If, however, an error is found, please contact the administrator of the site using the form provided.</p>
     </div>
 
-    <div class="rtdcForm">
-
-      <h2>RtDc Calculator</h2>
-      <hr>
-      <form action="" method="post" name="formRtdc">
-
-        <div class="container">
-          <p class="label">Synoptic Period:</p>
-          <select id="synoPd" onchange="">
-            <option value=""></option>
-            <option value="1">1200</option>
-            <option value="2">1800</option>
-            <option value="1">0000</option>
-            <option value="2">0600</option>
-          </select>
+    <div class="rtdcForm tools">
+      <div class="formWrapper">
+        <h3>RtDc Calculator</h3>
+        <form action="" method="post" id="formRtdc">
+    
+          <input type="hidden" id="visited" value="">
+          
+          <div class="formDiv">Synoptic Period: 
+            <select id="synoPeriod">
+              <option value="">--</option>
+              <option value="1200">1200</option>
+              <option value="1800">1800</option>
+              <option value="0000">0000</option>
+              <option value="0600">0600</option>
+            </select>
+          </div>
+          
+          <div class="formDiv">Number of Periods:
+            <select id="numPeriods" onchange="showLastPeriod()">
+              <option value="">--</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+            </select>
+          </div>
+          
+          <div class="formDiv">
+            <h4>First Period</h4>
+            Start: <input type="text" id="sFirst" value="" maxlength="4">
+            End: <input type="text" id="eFirst" value="" maxlength="4">
+          </div>
+          
+          <div class="chkbxWrap">
+            <input id="chkbx" type="checkbox">
+            <p>If period started more than 24hrs ago.</p>
+          </div>
+            
+          <div id="lastPeriod" class="formDiv hidden">
+            <h4>Last Period</h4>
+            Start: <input type="text" id="sLast" value="" maxlength="4">
+            End: <input type="text" id="eLast" value="" maxlength="4">
+          </div>
+          
+          <div class="formDiv">
+            <hr style="margin-top:5px;">
+            <div class="rtdc">
+              <p id="rt">Rt: </p>
+              <p id="dc">Dc: </p>
+            </div>
+            
+            <div class="buttons">
+              <button type="button" onclick="clearRtDc()">Clear</button><br>
+              <button type="button" onclick="submitRtDc()">Submit</button>
+            </div>
+          </div>
+        </form>
+        
+        <div class="errors">
+          <h3>Errors:</h3>
+          <p id="errors" class="errorText">
+            
+          </p>
         </div>
-
-        <div class="container">
-          <p class="label">Number of Periods:</p>
-          <select id="numPeriods" onchange="showLastPeriod(this)">
-            <option value=""></option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-          </select>
-        </div>
-        <hr>
-
-        <div class="container">
-          <h4>First Period</h4>
-          <table class="prdInput">
-            <tr>
-              <td>Start:</td>
-              <td><input type="text" maxlength="4" onchange="checkText(this)"></td>
-              <td>|</td>
-              <td>End:</td>
-              <td><input type="text" maxlength="4" onchange="checkText(this)"></td>
-            </tr>
-          </table>
-        </div>
-
-        <div class="container chkbx-container">
-          <input class="chkbx" type="checkbox">
-          <p>Period started more than 24 hours ago.</p>
-        </div>
-
-        <div id="lastPeriod" class="container hidden">
-          <h4>Last Period</h4>
-          <table class="prdInput">
-            <tr>
-              <td>Start:</td>
-              <td><input type="text" maxlength="4" onchange="checkText(this)"></td>
-              <td>|</td>
-              <td>End:</td>
-              <td><input type="text" maxlength="4" onchange="checkText(this)"></td>
-            </tr>
-          </table>
-        </div>
-
-        <hr>
-
-        <div class="container bottomWrapper">
-          <p class="label">909: <span>0 0</span></p>
-          <input class='button' type='submit' value='Submit'>
-          <input class='button' type='reset' value='Clear'>
-        </div>
-      </form>
-
+      </div>
     </div>
 
-    <div class="instructions">
-      <h2>Instructions</h2>
-      <hr>
+    <div class="tools">
+      <h3>Instructions</h3>
       <p>1. Select the synoptic period from the drop down menu provided.</p>
       <p>2. Select the number of periods of precipitation from the drop down menu provided.</p>
       <p><i>Note:</i> If only one period of precipitation occured within the previous 6 hours, select [1];
@@ -125,76 +114,74 @@
       <p><i>Note:</i> Pressing [clear] will refresh the form.</p>
     </div>
 
-    <div class="contentWrapperFull rtdcTable">
-      <h2>RtDc Calculation Table</h2>
-      <hr>
-      <p><b>Manobs Reference: 12.4.11.3.3</b></p>
-        <table>
-          <tr>
-            <td style="border:none;"></td>
-            <td style="border:none;"></td>
-            <td>Precip At Ob Time<br>
-                Or Within Last Hour</td>
-            <td>No Precip At Ob Time<br>
-                Or Within Last Hour</td>
-            <td style="border:none;"></td>
-          </tr>
-          <tr>
-            <td>Rt</td>
-            <td>1<br>Period</td>
-            <td>Time Period Began</td>
-            <td>Time Period Ended</td>
-            <td style="border-bottom:none;">0 - not used<br>
-                1 - 1hr or less<br>
-                2 - +1 to 2hrs<br>
-                3 - +2 to 3hrs<br>
-                4 - +3 to 4hrs<br>
-            </td>
-          </tr>
-          <tr>
-            <td style="border:none;"></td>
-            <td>2+<br>Periods</td>
-            <td>Time Last Period Began</td>
-            <td>Time Last Period Ended<br>
-                to Ob Time</td>
-            <td style="border-top:none;">5 - +4 to 5hrs<br>
-                6 - +5 to 6hrs<br>
-                7 - +6 to 12hrs<br>
-                8 - +12hrs<br>
-                9 - unknown</td>
-          </tr>
+    <div class="tools rtdcTable">
+      <h3>RtDc Calculation Table</h3>
+      <table>
+        <tr>
+          <td style="border:none;"></td>
+          <td style="border:none;"></td>
+          <td>Precip At Ob Time<br>
+              Or Within Last Hour</td>
+          <td>No Precip At Ob Time<br>
+              Or Within Last Hour</td>
+          <td style="border:none;"></td>
+        </tr>
+        <tr>
+          <td>Rt</td>
+          <td>1<br>Period</td>
+          <td>Time Period Began</td>
+          <td>Time Period Ended</td>
+          <td style="border-bottom:none;">0 - not used<br>
+              1 - 1hr or less<br>
+              2 - +1 to 2hrs<br>
+              3 - +2 to 3hrs<br>
+              4 - +3 to 4hrs<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="border:none;"></td>
+          <td>2+<br>Periods</td>
+          <td>Time Last Period Began</td>
+          <td>Time Last Period Ended<br>
+              to Ob Time</td>
+          <td style="border-top:none;">5 - +4 to 5hrs<br>
+              6 - +5 to 6hrs<br>
+              7 - +6 to 12hrs<br>
+              8 - +12hrs<br>
+              9 - unknown</td>
+        </tr>
 
-          <tr>
-            <td>Dc</td>
-            <td>1<br>Period</td>
-            <td>Time Period Began To<br>
-                Ob Time</td>
-            <td>Time Period Began To<br>
-                Time Period Ended</td>
-            <td>0 - 1hr or less<br>
-                1 - +1 to 3hrs<br>
-                2 - +3 to 6hrs<br>
-                3 - +6hrs<br>
-            </td>
-          </tr>
-          <tr>
-            <td style="border:none;"></td>
-            <td>2+<br>Periods</td>
-            <td>Time First Period Began<br>
-                To Ob Time</td>
-            <td>Time First Period Began To<br>
-                Time Last Period Ended</td>
-            <td>4 - + 1hr or less<br>
-                5 - +1 to 3hrs<br>
-                6 - +3 to 6hrs<br>
-                7 - +6hrs<br>
-          </tr>
-        </table>
+        <tr>
+          <td>Dc</td>
+          <td>1<br>Period</td>
+          <td>Time Period Began To<br>
+              Ob Time</td>
+          <td>Time Period Began To<br>
+              Time Period Ended</td>
+          <td>0 - 1hr or less<br>
+              1 - +1 to 3hrs<br>
+              2 - +3 to 6hrs<br>
+              3 - +6hrs<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="border:none;"></td>
+          <td>2+<br>Periods</td>
+          <td>Time First Period Began<br>
+              To Ob Time</td>
+          <td>Time First Period Began To<br>
+              Time Last Period Ended</td>
+          <td>4 - + 1hr or less<br>
+              5 - +1 to 3hrs<br>
+              6 - +3 to 6hrs<br>
+              7 - +6hrs<br>
+        </tr>
+      </table>
+      <p><b>Manobs Reference: 12.4.11.3.3</b></p>
     </div>
 
-    <div class="contentWrapperFull">
-      <h2>Manobs References</h2>
-      <hr>
+    <div class="tools">
+      <h3>Manobs References</h3>
       <p><b>Seventh Edition,<br>
       Amendment 19, April 2015<br>
       MANOBS - Manual of Surface Weather Observations 12 - 295</b></p>
@@ -256,8 +243,6 @@
       period of precipitation to the end of the last period of precipitation
       (See 12.3.10.3.3, examples 6, 7, and 10).</p>
       <p>Also: Display table for manual calculation of RtDc.</p>
-
-      <hr>
     </div>
 
   </main>
@@ -268,5 +253,4 @@
       <p>Copyright 2016-Present</p>
     </footer>
   </div>
-
 </body>
