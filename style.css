@@ -41,12 +41,25 @@ main{
   background-color:#fff;
   box-shadow:0px 2px 10px 5px;
 }
-
-.construction, p, h3{
+.construction, .tools, .resources, p, h3{
   margin:0;
   padding:0;
 }
-.construction, .tools, .resources{
+.construction{
+  width:960px;
+  min-height:100px;
+  margin:20px auto;
+  border:1px solid #111;
+  box-shadow:0px 4px 10px 1px;
+}
+.tools{
+  width:960px;
+  min-height:100px;
+  margin:20px auto;
+  border:1px solid #111;
+  box-shadow:0px 4px 10px 1px;
+}
+.resources{
   width:960px;
   min-height:100px;
   margin:20px auto;
@@ -98,7 +111,6 @@ main{
   width:inherit;
   min-height:200px;
 }
-
 form{
   display:inline-block;
   float:left;
@@ -206,7 +218,7 @@ hr{
 
 /* RtDc Calculation Table */
 .rtdcTable{
-  width:960px;
+  width:900px;
   min-height:100px;
 }
 .rtdcTable table{
