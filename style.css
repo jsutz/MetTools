@@ -1,4 +1,4 @@
-body, nav, header, main, footer, div{
+body, nav, footer, div{
   margin:0px;
   padding:0px;
 }
@@ -7,101 +7,246 @@ body{
   height:100%;
   background-color:#333;
 }
-nav, header, main, footer{
-  clear:left;
-  margin:0px auto;
-}
-
-/* -- Page Head and Header -- */
-.pageHead{
-  width:inherit;
-  height:125px;
-  background-color:#111;
-}
-header{
-  width:inherit;
-  background-color:#fff;
-}
-header h1{
-  width:1020px;
-  margin:auto;
-  padding-top:40px;
-  line-height:80px;
-  font-size:72px;
-}
 
 /* -- Page Head Fixed Navigation Bar -- */
-nav{
+.navMenu{
+  float:left;
   position:fixed;
   width:inherit;
-  height:40px;
+  height:50px;
   background-color:#111;
+  box-shadow:0px 2px 10px 2px;
 }
-.navMenu{
+nav{
   width:1020px;
-  line-height:40px;
-  margin:auto;
-  background-color:none;
+  margin:0px auto;
+  line-height:50px;
 }
-.navMenu a{
-  padding:2px 5px;
+nav a{
+  padding:2px 0px;
+  margin-right:10px;
   text-decoration:none;
-  color:#f2f2f2;
+  color:#d2d2d2;
+  font-size:20px;
 }
 
 /* -- Page Content -- */
 main{
+  clear:both;
   width:1020px;
   min-height:1000px;
+  margin:0px auto;
+  padding:10px 0px;
+  padding-top:60px;
+  background-color:#fff;
+  box-shadow:0px 2px 10px 5px;
 }
 
-/* Content Wrappers -- Full and Half width */
-.contentWrapperFull, .contentWrapperLeft, .contentWrapperRight{
-  float:left;
-  min-height:200px;
-  margin:10px 0px;
-  background-color:#fff;
+.construction, p, h3{
+  margin:0;
+  padding:0;
 }
-.contentWrapperFull{
-  width:1020px;
+.construction{
+  width:960px;
+  margin:20px auto;
+  border:1px solid #111;
+  box-shadow:0px 4px 10px 1px;
 }
-.contentWrapperLeft, .contentWrapperRight{
-  width:505px;
+.construction h3, .resources h3, .tools h3{
+  padding:5px;
+  background-color:#1d7686;
+  color:#1d1d1d;
+  border-bottom:1px solid #111;
 }
-.contentWrapperLeft{
-  margin-right:10px;
-}
-.contentWrapperFull p, .contentWrapperLeft p, .contentWrapperRight p{
-  margin:10px;
+.construction p, .construction ul, .tools p{
+  padding:10px;
+  background-color:rgb(102,102,102);
+  color:#e2e2e2;
+  font-size:16px;
   line-height:1.5;
 }
+.construction ul{
+  margin:0;
+  padding:0px 50px;
+}
 
-/* Content Header */
-h2{
-  height:30px;
-  line-height:30px;
-  margin:2px 10px;
+.resources, .tools{
+  width:960;
+  min-height:100px;
+  margin:20px auto;
+  background-color:rgb(102,102,102);
+  border:1px solid #111;
+  box-shadow:0px 4px 10px 1px;
+}
+.resources p{
+  display:inline-block;
+  width:460px;
+  margin:0;
+  padding:10px;
+  padding-right:0px;
+  background-color:rgb(102,102,102);
+}
+.resources a{
+  line-height:1.5;
+  margin:0px;
+  margin-left:10px;
+  padding:0px;
+  font-size:16px;
+  text-decoration:none;
+  font-weight:bold;
+  color:#d2d2d2;
+}
+.resources a:hover{
+  color:#111;
+}
+
+/* -- Form Style -- */
+.formWrapper{
+  display:inline-block;
+  width:inherit;
+  min-height:200px;
+}
+
+form{
+  display:inline-block;
+  float:left;
+  width:230px;
+  min-height:200px;
+  margin:10px;
+  padding:5px;
+  background-color:#d2d2d2;
+  border:1px solid #333;
+}
+.formDiv{
+  width:220px;
+  margin:0;
+  padding:1px 5px;
+}
+select{
+  display:inline-block;
+  margin-left:13px;
+}
+h4{
+  margin:5px 0px;
+  padding:0px;
+  font-size:18px;
+}
+input{
+  width:60px;
+  text-align:center;
+}
+.chkbxWrap{
+  min-height:50px;
+  margin:5px 0px;
+  background-color:#666;
+  border:1px solid #111;
+  border-radius:5px;
+}
+.chkbxWrap input{
+  width:0px;
+  height:35px;
+  margin:5px 10px;
+  margin-right:0px;
   padding:0px;
 }
-
-/* -- Page Footer -- */
-.pageFoot{
-  float:left;
-  width:inherit;
-  height:60px;
-  background-color:#111;
-  color:#f2f2f2;
+.chkbxWrap p{
+  display:inline-block;
+  width:180px;
+  margin:0px 5px;
+  padding:0px;
+  background-color:rgba(255,255,255,0);
+  color:#111;
 }
-footer{
-  width:1020px;
-  margin:0px auto;
+.buttons{
+  display:inline-block;
+  float:right;
+  width:80px;
+  min-height:40px;
+  margin-top:5px;
 }
-
-/* Horizontal Divider */
+.buttons button{
+  float:right;
+}
 hr{
-  float:left;
-  clear:both;
   width:100%;
   margin:0px;
   padding:0px;
+}
+
+.rtdc{
+  float:left;
+  width:100px;
+  min-height:40px;
+  margin:5px;
+  margin-left:0px;
+}
+.rtdc p{
+  margin:0px 5px;
+  margin-left:0px;
+  padding:0px;
+  font-size:18px;
+  font-weight:bold;
+  color:#111;
+  background-color:rgba(255,255,255,0);
+}
+
+.errors{
+  display:inline-block;
+  width:500px;
+  margin:10px;
+  padding:0;
+  background-color:#d2d2d2;
+  border:1px solid #333;
+}
+.errors h3{
+  background-color:rgba(255,255,255,0);
+}
+.errors p{
+  min-height:18px;
+  margin:5px;
+  padding:0px;
+  background-color:rgba(255,255,255,0);
+  color:#111;
+}
+
+.hidden{display:none;}
+.visible{display:visible;}
+
+/* RtDc Calculation Table */
+.rtdcTable{
+  width:960px;
+  min-height:100px;
+}
+.rtdcTable table{
+  margin:20px auto;
+  margin-bottom:10px;
+  padding:5px;
+  border:8px solid #d2d2d2;
+}
+.rtdcTable tr{
+  margin:0px;
+  padding:0px;
+}
+.rtdcTable td{
+  margin:0px;
+  padding:0px 10px;
+  border:1px solid #d2d2d2;
+  color:#d2d2d2;
+}
+
+/* -- Page Footer -- */
+
+.pageFoot{
+  width:inherit;
+  min-height:60px;
+  background-color:#111;
+  box-shadow:0px -2px 10px 2px;
+}
+footer{
+  width:1020px;
+  margin:0 auto;
+}
+footer p{
+  color:#d2d2d2;
+  padding:5px 0px;;
 }
