@@ -287,7 +287,7 @@ function getRt()
     duration = synoPeriod - end;
   }
   
-  alert(duration);
+  //alert(duration);
   
   if (duration < 100) return 1;
   else if (duration < 200) return 2;
@@ -322,7 +322,8 @@ function getDc()
   {
     duration = end - start;
   }
-  alert(duration);
+  
+  //alert(duration);
   
   if (numPeriods == 1)
   {
