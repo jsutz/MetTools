@@ -27,23 +27,32 @@ function submitRtDc()
   eLast = document.getElementById("eLast").value;
   checkBox = document.getElementById("chkbx").checked;
   
+  // initialize error wrapper and message
   var errorWrapper = document.getElementById("errors");
   errorMessage = "";
   
   // check to see if any of the required fields are empty
-  // alert error message if message is not an empty string
   errorMessage = checkRequiredInput();
+  // alert error message if message is not an empty string
   if (errorMessage != "") return errorWrapper.innerHTML = errorMessage;
   
   // if number of periods is 2, validates times for both periods
   // else, validates times for first period only
-  // alert error message if message is not an empty string
   errorMessage = checkTimesValid();
+  // alert error message if message is not an empty string
   if (errorMessage != "") return errorWrapper.innerHTML = errorMessage;
   
-  // calculate Rt and Dc
+  // check break between periods is greater than 15 minutes
+  // otherwise, convert to one period, alert user, and hide 
+  // last period container from page, set last period fields 
+  // to empty text and numPeriods to 1
+  if (numPeriods == 2 && eFirst+100 > sLast)
+    checkPeriodBreak();
+  
+  // calculate Rt
   var rt = getRt();
   document.getElementById("rt").innerHTML = "Rt: " + rt;
+  // calculate dc
   var dc = getDc();
   document.getElementById("dc").innerHTML = "Dc: " + dc;
   
@@ -60,8 +69,8 @@ function checkRequiredInput()
 {
   var e = "";
   
-  if (synoPeriod == "--") e = (e + "> Synoptic period not selected.<br>");
-  if (numPeriods == "--") e = (e + "> Number of periods not selected.<br>");
+  if (synoPeriod == "") e = (e + "> Synoptic period not selected.<br>");
+  if (numPeriods == "") e = (e + "> Number of periods not selected.<br>");
   
   if (sFirst == "") e = (e + "> Start of first period not entered.<br>");
   if (eFirst == "") e = (e + "> End of first period not entered.<br>");
@@ -98,100 +107,125 @@ function checkTimesValid()
   
   if (e != "") return e;
   
-  // adjust times if needed, then check if all times are within period
-  //  
+  // pack variables as integers for calculations
+  synoPeriod = parseInt(synoPeriod);
+  sFirst = parseInt(sFirst);
+  eFirst = parseInt(eFirst);
+  if (numPeriods == 2)
+  {
+    sLast = parseInt(sLast);
+    eLast = parseInt(eLast);
+  }
+  
   // if synoPeriod and/or end of first or last period, depending on the
   // number of periods selected, is "0000" then convert to "2400" for
   // use in calculations
-  if (synoPeriod == "0000")
+  if (synoPeriod == 0)
   {
-    if (numPeriods == "1" && eFirst == "0000")
-      eFirst = "2400";
-    else if (numPeriods == "2" && eLast == "0")
-      eLast = "2400";
-    synoPeriod = "2400";
+    if (numPeriods == 1 && eFirst == 0)
+      eFirst = 2400;
+    else if (numPeriods == 2 && eLast == 0)
+      eLast = 2400;
+    synoPeriod = 2400;
   }
   
+  if (checkBox)
+  {
+    eFirst += 2400;
+    if (numPeriods == 2)
+    {
+      sLast += 2400;
+      eLast += 2400;
+    }
+    synoPeriod += 2400;
+  }
+  
+  // start checks
   // if one period of precip selected
   if (numPeriods == "1")
   {
-    
-    if (parseInt(eFirst) < (parseInt(synoPeriod) - 600) || parseInt(eFirst) > parseInt(synoPeriod))
+    // check that start is less than end, end is less than or equal to syno,
+    // and that end time is within 6hr period
+    if (sFirst >= eFirst && sFirst < synoPeriod)
+      e = (e + "> Start of period is invalid.<br>");
+      
+    if (eFirst < (synoPeriod - 600) || eFirst > synoPeriod)
     {
       e = (e + "> End of period is invalid.<br>");
-      alert("If precipitation is occurring on the hour, the end time shall be equal the synoptic period.");
+      alert("If precipitation is occurring on the hour, set the end time equal to the synoptic period.");
     }
-      
-    if (checkBox)
-    {
-      synoPeriod = "" + parseInt(synoPeriod)+2400 + "";
-      eFirst += 2400;
-    }
-    
-    if (parseInt(sFirst) >= parseInt(eFirst) && parseInt(sFirst) < parseInt(synoPeriod))
-      e = (e + "> End of period is invalid.<br>")
   }
   // if 2 periods selected
   else if (numPeriods == "2")
   {
-    
-    if (parseInt(eFirst) < (parseInt(synoPeriod) - 600) || parseInt(eFirst) <= parseInt(sFirst))
-      e = (e + "> End of first period is invalid.<br>");
-    if (parseInt(sLast) < (parseInt(synoPeriod) - 600) || parseInt(sLast) <= parseInt(eFirst))
-      e = (e + "> Start of last period is invalid.<br>");
-    if (parseInt(eLast) < (parseInt(synoPeriod) - 600) || parseInt(eLast) <= parseInt(sLast) || parseInt(eLast) > parseInt(synoPeriod))
-      e = (e + "> End of last period is invalid.<br>");
-    
-    if (checkBox)
-    {
-      synoPeriod += 2400;
-      eFirst += 2400;
-      sLast += 2400;
-      eLast += 2400;
-    }
-    
-    // check to see if break between periods is less than 15 minutes
-    var hh_eFirst = eFirst.substr(0,2);
-    var mm_eFirst = eFirst.substr(2,4);
-    var hh_sLast = sLast.substr(0,2);
-    var mm_sLast = sLast.substr(2,4);
-    
-    if (parseInt(mm_sLast) - 15 < 0)
-    {
-      mm_sLast = ""+parseInt(mm_sLast)+45+"";
-      hh_sLast = ""+parseInt(hh_sLast)-1+"";
-      if (hh_sLast.length == 1)
-        hh_sLast = "0"+hh_sLast;
-    }
-    else mm_sLast = ""+parseInt(mm_sLast)-15+"";
-    
-    // if the break is less than 15 minutes...
-    if (parseInt(mm_sLast) < parseInt(mm_eFirst) && parseInt(hh_eFirst) >= parseInt(hh_sLast))
-    {
-      // convert to one period...
-      // change numPeriods = 1, set sLast and eLast = "",
-      numPeriods = 1;
-      eFirst = eLast;
-      sLast = "";
-      eLast = "";
+    if (sFirst >= eFirst && sFirst < synoPeriod)
+      e = (e + "> Start of period is invalid.<br>");
       
-      // change input tags inner html to reflect
-      document.getElementById("numPeriods").value = 1;
-      document.getElementById("eFirst").value = eFirst;
-      document.getElementById("sLast").value = "";
-      document.getElementById("eLast").value = "";
-      // hide the lastPeriod container
-      var lastPeriod = document.getElementById("lastPeriod");
-      lastPeriod.setAttribute('class', "hidden");
-      // alert the user of changes
-      alert("Break between periods is less than 15 minues.\nConverted to one period.");      
-    }    
+    if (eFirst < (synoPeriod - 600) || eFirst >= sLast)
+      e = (e + "> End of first period is invalid.<br>");
+    if (sLast <= (eFirst) || sLast < (synoPeriod - 600) || sLast >= eLast)
+      e = (e + "> Start of last period is invalid.<br>");
+    if (eLast <= (sLast) || eLast < (synoPeriod - 600) || eLast > synoPeriod)
+      e = (e + "> End of last period is invalid.<br>");    
   }
   return e;
 }
 
 //==============================================================================
-// checkTimesValid()
+// checkPeriodBreak()
+// 
+// checks to see if break between periods is less than 15 minutes
+// if so, clears and hides last period container, resetting fields
+//------------------------------------------------------------------------------
+function checkPeriodBreak()
+{
+  str_eFirst = ""+ eFirst +"";
+  str_sLast = ""+ sLast +"";
+  len_eFirst = str_eFirst.length;
+  len_sLast = str_sLast.length;
+  
+  // pad text
+  if (len_eFirst != 4)
+  {
+    pads = 4 - len_eFirst;
+    str_eFirst = ("0" * pads) + str_eFirst;
+  }
+  if (len_sLast != 4)
+  {
+    pads = 4 - len_sLast;
+    str_sLast = ("0" * pads) + str_sLast;
+  }
+  
+  min_eFirst = str_eFirst.substr(2,4);
+  min_sLast = str_sLast.substr(2,4);
+  
+  if (parseInt(min_sLast)-15 < 0)
+    min_sLast = ""+ (parseInt(min_sLast) + 45) +"";
+  
+  if (min_sLast <= min_eFirst)
+  {
+    // convert to one period...
+    // change numPeriods = 1, set sLast and eLast = "",
+    numPeriods = 1;
+    eFirst = eLast;
+    sLast = "";
+    eLast = "";
+    
+    // change input tags inner html to reflect
+    document.getElementById("numPeriods").value = 1;
+    document.getElementById("eFirst").value = eFirst;
+    document.getElementById("sLast").value = "";
+    document.getElementById("eLast").value = "";
+    // hide the lastPeriod container
+    var lastPeriod = document.getElementById("lastPeriod");
+    lastPeriod.setAttribute('class', "hidden");
+    // alert the user of changes
+    alert("Break between periods is less than 15 minues.\nConverted to one period.");      
+  }
+}
+
+//==============================================================================
+// checkTimeFormat()
 //
 // checks format of start and end times, and returns any errors
 //------------------------------------------------------------------------------
@@ -223,7 +257,7 @@ function checkTimeFormat(t)
 function getRt()
 {
   start = sFirst;
-  if (numPeriods == "2")
+  if (numPeriods == 2)
     end = eLast;
   else
     end = eFirst;
@@ -231,37 +265,14 @@ function getRt()
   // if precip occuring or within hour ( syno - start )
   if (end == synoPeriod || end > (synoPeriod - 100))
   {
-    start = ""+start+"";
-    hh_start = parseInt(start.substr(0,2));
-    mm_start = parseInt(start.substr(2,4));
-    
-    end = ""+synoPeriod+"";
-    hh_end = parseInt(end.substr(0,2));
-    mm_end = parseInt(end.substr(2,4));
+    duration = synoPeriod - start;
   }
   else // precip not occuring or within hour ( syno - end )
   {
-    start = ""+end+"";
-    hh_start = parseInt(start.substr(0,2));
-    mm_start = parseInt(start.substr(2,4));
-    
-    end = ""+synoPeriod+"";
-    hh_end = parseInt(end.substr(0,2));
-    mm_end = parseInt(end.substr(2,4));
+    duration = synoPeriod - end;
   }
   
-  // get duration hours
-  hh_dur = hh_end - hh_start;
-  
-  if (mm_end == 0 || mm_end < mm_start)
-  {
-    mm_end += 60;
-    hh_dur -= 1;
-  }
-  // get duration minutes
-  mm_dur = mm_end - mm_start;
-  
-  duration = ""+hh_dur+mm_dur+"";
+  alert(duration);
   
   if (duration < 100) return 1;
   else if (duration < 200) return 2;
@@ -292,39 +303,14 @@ function getDc()
     // if precip occuring or within hour ( syno - start )
     if (end == synoPeriod || end > (synoPeriod - 100))
     {
-      start = ""+start+"";
-      hh_start = parseInt(start.substr(0,2));
-      mm_start = parseInt(start.substr(2,4));
-      
-      end = ""+synoPeriod+"";
-      hh_end = parseInt(end.substr(0,2));
-      mm_end = parseInt(end.substr(2,4));
+      duration = synoPeriod - start;
     }
-    else // precip not occuring or within hour ( syno - end )
+    else // precip not occuring or within hour ( end - start )
     {
-      start = ""+start+"";
-      hh_start = parseInt(start.substr(0,2));
-      mm_start = parseInt(start.substr(2,4));
-      
-      end = ""+end+"";
-      hh_end = parseInt(end.substr(0,2));
-      mm_end = parseInt(end.substr(2,4));
+      duration = end - start;
     }
-    
-    // get duration hours
-    hh_dur = hh_end - hh_start;
-    
-    if (mm_end == 0 || mm_end < mm_start)
-    {
-      mm_end += 60;
-      hh_dur -= 1;
-    }
-    // get duration minutes
-    mm_dur = mm_end - mm_start;
-    
-    duration = ""+hh_dur+mm_dur+"";
   }
-  else return -1;
+  alert(duration);
   
   if (numPeriods == 1)
   {
@@ -340,7 +326,6 @@ function getDc()
     else if (duration <= 600) return 6;
     else if (duration > 600) return 7;
   }
-  else return -1;
 }
 
 
