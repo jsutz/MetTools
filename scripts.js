@@ -272,8 +272,6 @@ function getRt()
     duration = synoPeriod - end;
   }
   
-  alert(duration);
-  
   if (duration < 100) return 1;
   else if (duration < 200) return 2;
   else if (duration < 300) return 3;
@@ -310,7 +308,6 @@ function getDc()
       duration = end - start;
     }
   }
-  alert(duration);
   
   if (numPeriods == 1)
   {
@@ -327,10 +324,6 @@ function getDc()
     else if (duration > 600) return 7;
   }
 }
-
-
-
-
 
 //==============================================================================
 // sets the visted flag to "1" so when refreshed the form will 
