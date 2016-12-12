@@ -199,21 +199,31 @@ function checkPeriodBreak()
   min_eFirst = str_eFirst.substr(2,4);
   min_sLast = str_sLast.substr(2,4);
   
-  if (parseInt(min_eFirst) > 40 && parseInt(min_sLast)-15 < 0)
+  if (parseInt(min_sLast) < parseInt(min_eFirst) || parseInt(min_sLast)-15 <= 0)
     min_sLast = ""+ (parseInt(min_sLast) + 60) +"";
-  
+    
   if (parseInt(min_sLast)-15 <= parseInt(min_eFirst))
   {
     // convert to one period...
     // change numPeriods = 1, set sLast and eLast = "",
     numPeriods = 1;
     eFirst = eLast;
+    tmp = eFirst;
+    if (tmp == "2400") tmp = "0000";
+    else if (tmp > "2400")
+    {
+      tmp = parseInt(tmp)-2400;
+      tmp = ""+tmp+"";
+      if (tmp.length != 4)
+        pads = 4 - tmp.length;
+        tmp = "0"*pads + tmp;
+    }
     sLast = "";
     eLast = "";
     
     // change input tags inner html to reflect
     document.getElementById("numPeriods").value = 1;
-    document.getElementById("eFirst").value = eFirst;
+    document.getElementById("eFirst").value = tmp;
     document.getElementById("sLast").value = "";
     document.getElementById("eLast").value = "";
     // hide the lastPeriod container
@@ -256,12 +266,17 @@ function checkTimeFormat(t)
 //------------------------------------------------------------------------------
 function getRt()
 {
-  start = sFirst;
   if (numPeriods == 2)
+  {
+    start = sLast;
     end = eLast;
+  }
   else
+  {
+    start = sFirst;
     end = eFirst;
-    
+  }
+  
   // if precip occuring or within hour ( syno - start )
   if (end == synoPeriod || end > (synoPeriod - 100))
   {
@@ -271,6 +286,8 @@ function getRt()
   {
     duration = synoPeriod - end;
   }
+  
+  alert(duration);
   
   if (duration < 100) return 1;
   else if (duration < 200) return 2;
@@ -296,18 +313,16 @@ function getDc()
   else
     end = eFirst;
   
-  if (start < end && end <= synoPeriod)
-  { 
-    // if precip occuring or within hour ( syno - start )
-    if (end == synoPeriod || end > (synoPeriod - 100))
-    {
-      duration = synoPeriod - start;
-    }
-    else // precip not occuring or within hour ( end - start )
-    {
-      duration = end - start;
-    }
+  // if precip occuring or within hour ( syno - start )
+  if (end == synoPeriod || end > (synoPeriod - 100))
+  {
+    duration = synoPeriod - start;
   }
+  else // precip not occuring or within hour ( end - start )
+  {
+    duration = end - start;
+  }
+  alert(duration);
   
   if (numPeriods == 1)
   {
@@ -324,6 +339,10 @@ function getDc()
     else if (duration > 600) return 7;
   }
 }
+
+
+
+
 
 //==============================================================================
 // sets the visted flag to "1" so when refreshed the form will 
