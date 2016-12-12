@@ -199,10 +199,10 @@ function checkPeriodBreak()
   min_eFirst = str_eFirst.substr(2,4);
   min_sLast = str_sLast.substr(2,4);
   
-  if (parseInt(min_sLast)-15 < 0)
-    min_sLast = ""+ (parseInt(min_sLast) + 45) +"";
+  if (parseInt(min_eFirst) > 40 && parseInt(min_sLast)-15 < 0)
+    min_sLast = ""+ (parseInt(min_sLast) + 60) +"";
   
-  if (min_sLast <= min_eFirst)
+  if (parseInt(min_sLast)-15 <= pareInt(min_eFirst))
   {
     // convert to one period...
     // change numPeriods = 1, set sLast and eLast = "",
