@@ -34,59 +34,41 @@ nav a{
 main{
   clear:both;
   width:1020px;
-  min-height:1000px;
+  min-height:800px;
   margin:0px auto;
   padding:10px 0px;
   padding-top:60px;
   background-color:#fff;
   box-shadow:0px 2px 10px 5px;
 }
-.construction, .tools, .resources, p, h3{
+p, h3{
   margin:0;
-  padding:0;
 }
-.construction{
-  width:960px;
-  min-height:100px;
-  margin:20px auto;
-  border:1px solid #111;
-  box-shadow:0px 4px 10px 1px;
-  background-color:rgb(102,102,102);
-}
-.tools{
-  width:960px;
-  min-height:100px;
-  margin:20px auto;
-  border:1px solid #111;
-  box-shadow:0px 4px 10px 1px;
-  background-color:rgb(102,102,102);
-}
-.resources{
-  width:960px;
-  min-height:100px;
-  margin:20px auto;
-  border:1px solid #111;
-  box-shadow:0px 4px 10px 1px;
-  
-  background-color:rgb(102,102,102);
-}
-.construction h3, .resources h3, .tools h3{
+.contact h3, .news h3, .tools h3, .resources h3{
   padding:5px;
   background-color:#1d7686;
   color:#1d1d1d;
   border-bottom:1px solid #111;
 }
-.construction p, .construction ul, .tools p{
+.contact p, .contact ul, .tools p, .news p{
   padding:10px;
+  background-color:rgb(102,102,102);
   color:#e2e2e2;
   font-size:16px;
   line-height:1.5;
-  background-color:rgb(102,102,102);
 }
-.construction ul{
+.contact ul{
   margin:0;
   padding:0px 50px;
+}
+
+.tools, .resources, .contact{
+  width:960;
+  min-height:100px;
+  margin:20px auto;
   background-color:rgb(102,102,102);
+  border:1px solid #111;
+  box-shadow:0px 4px 10px 1px;
 }
 .resources p{
   display:inline-block;
@@ -104,9 +86,13 @@ main{
   font-size:16px;
   text-decoration:none;
   font-weight:bold;
-  color:#d2d2d2;
+  color:#e2e2e2;
 }
-.resources a:hover{
+.contact a{
+  color:#e2e2e2;
+  font-weight:bold;
+}
+.resources a:hover, .contact a:hover{
   color:#111;
 }
 
@@ -116,7 +102,8 @@ main{
   width:inherit;
   min-height:200px;
 }
-form{
+
+.formRtdc{
   display:inline-block;
   float:left;
   width:230px;
@@ -125,22 +112,23 @@ form{
   padding:5px;
   background-color:#d2d2d2;
   border:1px solid #333;
+  border-radius:5px;
 }
 .formDiv{
   width:220px;
   margin:0;
   padding:1px 5px;
 }
-select{
+.formDiv select{
   display:inline-block;
   margin-left:13px;
 }
-h4{
+.formDiv h4{
   margin:5px 0px;
   padding:0px;
   font-size:18px;
 }
-input{
+.formDiv input{
   width:60px;
   text-align:center;
 }
@@ -206,6 +194,7 @@ hr{
   padding:0;
   background-color:#d2d2d2;
   border:1px solid #333;
+  border-radius:5px;
 }
 .errors h3{
   background-color:rgba(255,255,255,0);
@@ -225,8 +214,6 @@ hr{
 .rtdcTable{
   width:960px;
   min-height:100px;
-  margin:0px auto;
-  padding:0px;
 }
 .rtdcTable table{
   margin:20px auto;
@@ -243,6 +230,47 @@ hr{
   padding:0px 10px;
   border:1px solid #d2d2d2;
   color:#d2d2d2;
+}
+
+/* -- Contact Form -- */
+.formContact{
+  display:block;
+  float:left;
+  width:600px;
+  min-height:200px;
+  margin:10px;
+  padding:10px;
+  background-color:#d2d2d2;
+  border:1px solid #333;
+  border-radius:5px;
+}
+.formContact tr, .formContact td{
+  margin:0px;
+  padding:0px;
+}
+.formContact td p{
+  margin:0px;
+  padding:0px;
+}
+.formContact p{
+  display:inline-block;
+  background-color:rgba(255,255,255,0);
+  color:#111;
+  margin:5px 2px;
+  padding:0px;
+}
+.formContact textarea{
+  width:600px;
+  height:250px;
+  margin:5px 0px;
+  padding:5px;
+  resize:none;
+  border:1px solid #111;
+  font-size:16px;
+}
+.formContact button{
+  float:right;
+  margin-top:5px;
 }
 
 /* -- Page Footer -- */
