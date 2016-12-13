@@ -280,6 +280,7 @@ function getRt()
   // if precip occuring or within hour ( syno - start )
   if (end == synoPeriod || end > (synoPeriod - 100))
   {
+    if (synoPeriod < start) synoPeriod += 2400;
     duration = synoPeriod - start;
   }
   else // precip not occuring or within hour ( syno - end )
@@ -287,7 +288,7 @@ function getRt()
     duration = synoPeriod - end;
   }
   
-  //alert(duration);
+  // alert(duration);
   
   if (duration < 100) return 1;
   else if (duration < 200) return 2;
@@ -316,14 +317,16 @@ function getDc()
   // if precip occuring or within hour ( syno - start )
   if (end == synoPeriod || end > (synoPeriod - 100))
   {
+    if (synoPeriod < start) synoPeriod += 2400;
     duration = synoPeriod - start;
   }
   else // precip not occuring or within hour ( end - start )
   {
+    if (end < start) end += 2400;
     duration = end - start;
   }
   
-  //alert(duration);
+  // alert(duration);
   
   if (numPeriods == 1)
   {
