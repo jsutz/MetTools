@@ -1,0 +1,69 @@
+Nasa: Global Change Master Directory
+  http://gcmd.gsfc.nasa.gov/learn/pointers/weather.html
+
+Penn State: Department of Meteorology and Atmospheric Science
+  http://www.met.psu.edu/weather
+
+University of Michigan:
+  http://cirrus.sprl.umich.edu/wxnet/index.php
+
+  Weather sites:
+  http://cirrus.sprl.umich.edu/wxnet/servers.php
+
+  American Cams:
+  http://cirrus.sprl.umich.edu/wxnet/wxcam.php
+
+  American Radar and Satellite:
+  http://cirrus.sprl.umich.edu/wxnet/radsat.php
+
+  State and City Specific Products:
+  http://cirrus.sprl.umich.edu/wxnet/states.php
+  http://cirrus.sprl.umich.edu/wxnet/wsi.php
+
+  Maps:
+  http://cirrus.sprl.umich.edu/wxnet/maps.php
+
+  Software Products:
+  http://cirrus.sprl.umich.edu/wxnet/software.php
+
+National Weather Association:
+  http://nwas.org/
+
+  Journal of Operational Meteorology:
+  http://nwas.org/journal-operational-meteorology/
+
+  Annual Meeting:
+  http://nwas.org/meetings/nwas16/index.html
+
+NOAA: National Oceanic and Atmospheric Administration
+  Home
+  http://www.noaa.gov/
+
+  Weather
+  http://www.noaa.gov/weather
+
+  Climate
+  http://www.noaa.gov/climate
+
+  Marine and Aviation:
+  http://www.noaa.gov/marine-aviation
+
+  Office of Marine and Aviation Operations:
+  http://www.omao.noaa.gov/
+
+  Research:
+  http://www.noaa.gov/research
+  http://research.noaa.gov/
+
+  National Weather Service:
+  http://www.weather.gov/
+
+
+The Canadian Encyclopedia: Meteorology
+  http://www.thecanadianencyclopedia.ca/en/article/meteorology/#links
+
+
+Publications/Documents:
+
+  National Weather Service (and Partners): Publications and Brochures
+  http://www.weather.gov/owlie/publication_brochures
