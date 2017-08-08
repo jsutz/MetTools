@@ -1,21 +1,37 @@
-<head>
-  <meta charset="utf-8">
-  <title>MetTools: Tools</title>
-  <script src='scripts.js' type='text/javascript'></script>
-  <link href='style.css' type='text/css' rel='stylesheet'>
-  <link href='tools.css' type='text/css' rel='stylesheet'>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>MetTools: Tools</title>
+    
+    <!-- My Stylesheet -->
+    <link rel="stylesheet" href="bs_style.css">
+    <link href='style/style.css' type='text/css' rel='stylesheet'>
+    <link href='style/tools.css' type='text/css' rel='stylesheet'>
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+    <!-- My JS Scripts -->
+    <script src='js_scripts/scripts.js' type='text/javascript'></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Inline JS Scripts -->
+    <script>
+      $(function(){
+        $("#header").load("header.html");
+        $("#footer").load("footer.html");
+      });
+    </script>
 </head>
 
 <body onLoad="checkToolsPageRefresh()">
-  <!-- Fixed Navigation Bar -->
-  <div class="navMenu">
-    <nav>
-      <a href="index.html"><span style="font-size:32px;"><b>MetTools</b></span></a>
-      <a href="">Tools</a>
-      <a href="resources.html">Resources</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
+  <!-- Include the header.html file -->
+  <header id="header"></header>
 
   <!-- wrapper for main page content -->
   <main>
@@ -254,10 +270,6 @@
 
   </main>
 
-  <!-- wrapper for page footer -->
-  <div class="pageFoot">
-    <footer>
-      <p>Copyright 2016-Present</p>
-    </footer>
-  </div>
+  <!-- Include the footer.html file -->
+  <footer id="footer"></footer>
 </body>
