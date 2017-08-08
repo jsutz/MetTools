@@ -17,39 +17,7 @@ body{
   background-color:#333;
 }
 
-/* -- Page Head Fixed Navigation Bar -- */
-.navMenu{
-  float:left;
-  position:fixed;
-  width:inherit;
-  height:50px;
-  background-color:#111;
-  box-shadow:0px 2px 10px 2px;
-}
-nav{
-  width:1020px;
-  margin:0px auto;
-  line-height:50px;
-}
-nav a{
-  padding:2px 0px;
-  margin-right:10px;
-  text-decoration:none;
-  color:#d2d2d2;
-  font-size:20px;
-}
-
 /* -- Page Content -- */
-main{
-  clear:both;
-  width:1020px;
-  min-height:800px;
-  margin:0px auto;
-  padding:10px 0px;
-  padding-top:60px;
-  background-color:#fff;
-  box-shadow:0px 2px 10px 5px;
-}
 .contentWrap{
   width:960;
   min-height:100px;
