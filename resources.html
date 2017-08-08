@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- My Stylesheet -->
+    <link rel="stylesheet" href="bs_style.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script>
+    $(function(){
+      $("#header").load("include/header.html");
+      $("#content").load("include/urls.html");
+      $("#footer").load("include/footer.html");
+    });
+    </script>
+  </head>
+
+<body>
+  <!-- Include the header.html file -->
+  <header id="header"></header>
+
+  <!-- Main Content Body -->
+  <main class="container">
+
+    <!-- Welcome message -->
+    <h2>A Repository of Meteorology Resources</h2>
+    <p>If you have more links to add, or find that certain links are missing or not working correctly, please contact
+    the site administrator with details.</p>
+    <p>Any links forwarded to the administrator will be added in a timely fashion.</p>
+
+    <!-- Add line break -->
+    <hr>
+
+    <div id="content"></div>
+
+  </main> <!-- End of Main Container -->
+
+  <!-- Include the footer.html file -->
+  <footer id="footer"></footer>
+</body>
+</html>

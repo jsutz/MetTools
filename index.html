@@ -12,50 +12,55 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
+
+    <script>
+    $(function(){
+      $("#header").load("header.html");
+      $("#footer").load("footer.html");
+    });
+    </script>
+  </head>
 
 <body>
-  <!-- Fixed Navigation Bar -->
-  <div class="container">
-    <nav>
-      <a href="#">
-        <span style="font-size:32px;"><b>CFMet</b></span>
-      </a>
-      <a href="tools.html">Tools</a>
-      <a href="links.html">Links</a>
-    </nav>
-  </div>
+  <!-- Include the header.html file -->
+  <header id="header"></header>
+  
+  <!-- Main Content Body -->
+  <main class="container">
 
-  <div class="container">
+    <h2>CFMet Home</h2>
 
-    <div class="wrap">
-      <h2>ABOUT THIS WEBSITE</h2>
-      <p>This purpose of this website is to provide resources and tools to help aid
-      meteorological technicians with their everyday tasks.</p>
-      <p>This page is still undergoing construction and some features may not be
-      fully functional at this time.</p>
-      <p>Included On This Site:
-        <ul>
-          <li>Links to Meteorology Websites, Satellites, Radars, Met Cams, Aviation Tools, Etc;
-          <li>Links to Met Publications, Research Papers, Journals, Meteorology Courses, Etc;
-          <li>909:RtDc Calculator Tool, Manual Calculation Table and MANOBS References;
-        </ul>
-      </p>
-      <p>Coming Soon:
-        <ul>
-	  <li>General Meteorology and Trade Related News;
-	  <li>Links to More Resources;
-	  <li>More Met Tools;
-	  <li>CFSMET Training Documents and Slides;
-        </ul>
-      </p>
-    </div>
+    <p>The CFmet site has been built to provide useful resources to aid meteorological technicians with their
+    everyday duties. The website is still undergoing construction and some features may not be
+    fully functional at this time. If you encounter issues, please contact the site administrator with details.</p>
 
-  </div> <!-- End of Main Container 'div' -->
+    <hr>
+    
+    <h4>Currently Included:</h4>
+    <ul>
+      <li>The Links page provides a groing repository of urls for a wide range of meteorology resources
+      including: satellites, radars, cameras, aviation tools, publications, research papers, journals,
+      courses, and more.</li>
+      <li>The Tools page, for now, provides only a useful widget for calculating 909:RtDc codes, along with
+      the calculation table and the associated Manobs reference. More tools will be added in the future.</li>
+    </ul>
 
-  <!-- wrapper for page footer -->
-  <footer>
-    <p>Copyright 2016-Present</p>
-  </footer>
+    <h4>Change Log:</h4>
+    <ul>
+      <li>Updated general site layout and functionality.</li>
+      <li>Update format of links page and added more links. More to come.</li>
+    </ul>
+
+    <h4>Coming Soon:</h4>
+    <ul>
+      <li>Add general meteorology and related news.</li>
+      <li>More resources to come.</li>
+      <li>More tools to come.</li>
+    </ul>
+
+  </main> <!-- End of Main Container -->
+
+  <!-- Include the footer.html file -->
+  <footer id="footer"></footer>
 </body>
 </html>
