@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- My Stylesheet -->
-    <link href="bs_style.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="bs_style.css">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- jQuery library -->
@@ -27,20 +27,21 @@
   <header id="header"></header>
 
   <!-- Main Content Body -->
-  <main class="container">
+  <div class="jumbotron">
+    <div class="container">
+      <!-- Page message -->
+      <h2>Meteorology Resources</h2>
+      <p>This page contains a repository of links that redirect to all kinds of meteorology resources ranging from
+      general met information, weather watch products, cameras, journals, research papers, and climate and historical
+      data, as well as a number of educational resources.</p>
+      <p>Links are continually being added and/or updated. If you have more links to add, or find that certain links are
+      missing or just not working correctly, please contact the site administrator with details and the issue will 
+      be resolved promptly.</p>
+    </div>
+  </div>
 
-    <!-- Welcome message -->
-    <h2>A Repository of Meteorology Resources</h2>
-    <p>If you have more links to add, or find that certain links are missing or not working correctly, please contact
-    the site administrator with details.</p>
-    <p>Any links forwarded to the administrator will be added in a timely fashion.</p>
-
-    <!-- Add line break -->
-    <hr>
-
-    <div id="content"></div>
-
-  </main> <!-- End of Main Container -->
+  <!-- Links Container -->
+  <div id="content" class="container"></div>
 
   <!-- Include the footer.html file -->
   <footer id="footer"></footer>
