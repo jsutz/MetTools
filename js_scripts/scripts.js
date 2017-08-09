@@ -383,7 +383,7 @@ function showLastPeriod()
   }
   else
   {
-    lastPeriod.setAttribute('class', "formDiv visible");
+    lastPeriod.setAttribute('class', "form-group visible");
   }
 }
 
