@@ -4,8 +4,21 @@
   padding: 20px;
 }
 
+
+/* -- Full Size Embedded Content Container -- */
+.embedded-container{
+  margin: auto;
+  width: 1200px;
+}
+.embedded-html{
+  width: 1200px;
+  height: 900px;
+  margin: 0; padding: 0;
+}
+
 /* -- My Page Element Styles -- */
 main{
+  min-width: 100vw;
   min-height: 90vh;
 }
 
@@ -16,6 +29,8 @@ ul a:hover{
   color:#23527c;
   text-decoration: none;
 }
+
+
 
 .float-right{
   display: inline-block;
