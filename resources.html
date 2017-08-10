@@ -16,34 +16,42 @@
     <script>
     $(function(){
       $("#header").load("include/header.html");
-      $("#content").load("include/urls.html");
+      $("#urls").load("include/urls.html");
       $("#footer").load("include/footer.html");
     });
     </script>
   </head>
 
 <body>
-  <!-- Include the header.html file -->
+  <!-- Include the header.html file here -->
   <header id="header"></header>
 
-  <!-- Main Content Body -->
-  <div class="jumbotron">
-    <div class="container">
-      <!-- Page message -->
-      <h2>Meteorology Resources</h2>
-      <p>This page contains a repository of links that redirect to all kinds of meteorology resources ranging from
-      general met information, weather watch products, cameras, journals, research papers, and climate and historical
-      data, as well as a number of educational resources.</p>
-      <p>Links are continually being added and/or updated. If you have more links to add, or find that certain links are
-      missing or just not working correctly, please contact the site administrator with details and the issue will 
-      be resolved promptly.</p>
+  <main> <!-- Main Content Container - Full Device Width, 90% Device Height, minimum-->
+
+    <!-- Start of Jumbotron -->
+    <div class="jumbotron">
+      <div class="container">
+        <h2>Meteorology Resources</h2>
+        
+        <p>
+        This page contains links to all kinds of meteorology resources, ranging from general meteorology information,
+        weather watch products, cameras, journals, research papers, and climate and historical data, as well as a number
+        of educational resources.
+        <br>
+        Links are continually being added and/or updated. If you have more links to add, or find that certain links are
+        missing or just not working correctly, please contact the site administrator with details and the issue will
+        be resolved promptly.
+        </p>
+      </div>
     </div>
-  </div>
+    <!-- End of Jumbotron -->
 
-  <!-- Links Container -->
-  <div id="content" class="container"></div>
+    <!-- Include the urls.html file here -->
+    <div id="urls" class="container"></div>
 
-  <!-- Include the footer.html file -->
+  </main> <!-- End of main container -->
+
+  <!-- Include the footer.html file here -->
   <footer id="footer"></footer>
 </body>
 </html>
