@@ -1,0 +1,183 @@
+/*
+ *
+ * Base styles for generic page layout
+ *
+ */
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+html, body, header, nav, main, footer,
+h1, h2, h3, h4, h5, h6,
+div, p, ul, li, a, img, {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*
+ * Main Page Element Styles
+ */
+
+main{
+    height: 100vh;
+}
+
+p{
+    font-size: 16px;
+}
+
+ul li, ul a{
+    font-size: 16px;
+}
+
+ul li{
+    list-style-type: none;
+}
+
+ul a:hover{
+    color: #23527c;
+    text-decoration: none;
+}
+
+ul a:active{
+    color: #23527c;
+}
+
+p br{
+    margin-bottom: 10px;
+}
+
+hr{
+    border-color: #c3c3c3;
+}
+
+/*
+ * Jumbotron
+ */
+
+.jumbotron{
+    height: 500px;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0,0,0,.5);
+}
+
+.index-main{
+    position: relative;
+    top: -125px;
+}
+
+/*
+ * Thumbnails
+ */
+
+.thumbnail{
+    height: 250px;
+}
+
+/*
+ * Header specific style elements
+ */
+
+header{
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    background-color: #337ab7;
+}
+
+header span{
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+header a{
+    padding-right: 10px;
+    font-size: 18px;
+    color: #fff;
+}
+
+header a:active{
+    color: #777;
+}
+
+header a:hover{
+    text-decoration: none;
+}
+
+/*
+ * Header specific style elements
+ */
+
+footer{
+    width: 100%;
+    min-height: 200px;
+    background-color: #333333;
+  }
+
+footer p{
+    color: #fff;
+  }
+
+
+
+/* ========================================================================== */
+
+/*
+ * Resources.html specific styles
+ */
+
+
+
+/*
+ * Tools.html specific styles
+ */
+
+.tools-nav, .tools-content{
+    min-height: 100vh;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.tools-nav{
+    padding-right: 0;
+    border-right: 10px solid #e3e3e3;
+}
+
+.tools-nav ul{
+    margin: 0;
+    padding: 0;
+}
+
+.tools-nav input, .tools-nav li{
+    margin: 0;
+    padding: 2px 10px;
+}
+
+.tools-nav input{
+    border: none;
+    background-color: #fff;
+    font-size: 18px;
+    color: #337ab7;
+}
+
+.tools-nav input:hover{
+    color: #333;
+}
+
+.tools-content{
+    padding-left:0;
+}
+
+.tools-content iframe {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #e3e3e3;
+    box-sizing: border-box;
+}

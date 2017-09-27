@@ -1,31 +1,47 @@
-/* -- RtDc Form Styles -- */
+p{
+    font-size: 16px;
+}
+
+hr{
+    border-color: #c3c3c3;
+}
+
+.visible{
+    display: block;
+}
+
 .hidden{
     display: none;
 }
+
+/*
+ * RtDc Form Styles
+ */
 
 form h4{
   margin-top: 0;
 }
 
-#rtdc_form label{
+.form-group label{
   margin: 0;
   margin-right: 2px;
 }
 
-#rtdc_form input{
+.form-group input{
     font-size:1.1em;
     max-width: 60px;
     text-align: center;
     font-weight: bold;
 }
 
-#rtdc_form select{
+.form-group select{
   font-size: 1.1em;
   font-weight: bold;
   text-align: center;
   border-radius: 5px;
   margin-left: 2px;
 }
+
 #synoPeriod{
   width: 80px;
 }
@@ -50,11 +66,12 @@ form h4{
     margin-top:12px;
 }
 
-#rt, #dc{
-  font-size: 1.2em;
+#rt-label, #dc-label, #error-label{
+  font-size: 18px;
+  font-weight: bold;
 }
 
-#errors{
+#error-wrapper{
   display: block;
   height: 160px;
   padding: 10px;
@@ -63,25 +80,57 @@ form h4{
   font-size: 1.1em;
 }
 
-/* RtDc Calculation Table */
+/*
+ * Buttons for transitioning between content within the iframe
+ */
 
-.rtdc_help li{
-  font-size: 1.2em;
+.content-buttons input{
+    padding: 0px 20px;
+    border: none;
+    background-color: #fff;
+    font-size: 18px;
+    color: #337ab7;
 }
 
-.rtdc_table table{
-  margin:20px auto;
-  margin-bottom:10px;
-  padding:5px;
+.content-buttons input:hover{
+    color: #333;
+}
+
+/*
+ * Instruction wrapper
+ */
+
+#rtdc-help p i{
+    display: block;
+    padding: 4px 20px;
+}
+
+/*
+ * Manual calculation table wrapper
+ */
+
+#rtdc-table table{
+  margin:20px 0;
   border:8px solid #d2d2d2;
 }
-.rtdc_table tr{
+
+#rtdc-table tr{
   margin:0px;
   padding:0px;
 }
-.rtdc_table td{
+
+#rtdc-table td{
   margin:0px;
   padding:0px 10px;
   border:1px solid #d2d2d2;
   color:#333;
+}
+
+/*
+ * Manobs references wrapper
+ */
+
+.rtdc-refs p{
+    height: 100%;
+    background-color: #333;
 }
