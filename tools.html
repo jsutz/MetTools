@@ -1,208 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>Met > Tools</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>CFMet: Tools</title>
-
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <!-- My Stylesheet -->
-    <link href="style/bs_style.css" type="text/css" rel="stylesheet">
+
+    <!-- My stylesheets -->
+    <link href="styles/base.css" type="text/css" rel="stylesheet">
+    <link href="styles/style.css" type="text/css" rel="stylesheet">
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <!-- My JS Scripts -->
-    <script src='js_scripts/scripts.js' type='text/javascript'></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!-- Inline JS Scripts -->
-    <script>
-      $(function(){
-        $("#header").load("include/header.html");
-        $("#rtdc_form").load("rtdc_form.html");
-        $("#footer").load("include/footer.html");
-      });
+
+    <!-- Inline scripts -->
+    <script type="text/javascript">
+        $(function(){
+            $("#header").load("includes/header.html");
+            $("#footer").load("includes/footer.html");
+        });
     </script>
+
+    <!-- External scripts -->
+    <script type="text/javascript" language="javascript" src="scripts/JS/scripts.js"></script>
+    <script type="text/javascript" language="javascript" src="scripts/JS/Rtdc/form.js"></script>
+
 </head>
 
-<body onLoad="checkToolsPageRefresh()">
-  <!-- Include the header.html file -->
-  <header id="header"></header>
+<body>
 
-  <main> <!-- Main Content Container - Full Device Width, 90% Device Height, minimum-->
-    
-    <div class="container well">
-      <h2>RtDc Calculator</h2>
-      <p>
-      This tool is to be used as an aid only, and it is highly recommended that the technician manually 
-      calculate the codes for Rt and Dc to ensure their correctness. That being said, the tool has 
-      undergone more than a year of testing and operational usage and can be trusted to generate the correct 
-      codes. If, however, an error is encountered, please contact the site administrator with details.
-      </p>
-    </div>
-    
-    <div id="rtdc_form" class="container"></div>
+    <!-- Include the header.html file -->
+    <header id="header"></header>
 
-    <div class="container well">
-      <div class="row rtdc_help">
-        <div class="col-sm-5">
-          <h3>Instructions</h3>
-          <ol>
-            <li>Select the appropriate synoptic period from the drop down menu provided.</li>
-            <li>Select the number of periods of precipitation from the drop down menu provided.</li>
-            <i>If only one period of precipitation occured within the previous 6 hours, select [1];
-            If two or more periods of precipitation occured within the previous 6 hours, select [2].</i>
-            <li>Enter the start and the end times into the text boxes provided.</li>
-            <i>If the first period of precipitation began more than 24 hours prior to the synoptic
-            period, check the box provided, otherwise, leave it unchecked.</i>
-            <i>If two or more periods occured, enter the start and end times for the first period and
-            last period of precipitation.</i>
-            <i>If two or more periods occured, and the break between them is less than 15 minutes, the
-            two periods will be combined and displayed as one period.</i>
-            <li>When all required fields are entered, press [SUBMIT] to validate the input.</li>
-            <i>If no errors appear, the codes for Rt and Dc will be displayed at the bottom of the
-            form.</i>
-            <li>Press [CLEAR] to refresh the form.</li>
-          </ol>
+    <!-- Main Content Container -->
+    <main class="container">
+
+        <div class="row">
+
+            <div class="tools-nav col-md-3">
+                <h3>Tools</h3>
+                <hr>
+
+                <ul class="tools-nav-buttons">
+                    <input type="button" value="RtDc Calculator" onclick="loadRtdcCalc();" />
+
+                    <hr>
+                    <li>More To Come...</li>
+                </ul>
+            </div>
+
+            <div class="tools-content col-md-9">
+                <!--
+                    Change src of iframe to be the landing page of the tools page
+                    And change scrolling to no
+                -->
+                <iframe id="tools-viewport" src="#" frameborder="0" scrolling="auto"></iframe>
+            </div>
+
         </div>
 
-        <div class="col-sm-7 rtdc_table">
-          <h3>RtDc Calculation Table</h3>
-          <table>
-            <tr>
-              <td style="border:none;"></td>
-              <td style="border:none;"></td>
-              <td>Precip At Ob Time<br>
-                  Or Within Last Hour</td>
-              <td>No Precip At Ob Time<br>
-                  Or Within Last Hour</td>
-              <td style="border:none;"></td>
-            </tr>
-            <tr>
-              <td>Rt</td>
-              <td>1<br>Period</td>
-              <td>Time Period Began</td>
-              <td>Time Period Ended</td>
-              <td style="border-bottom:none;">0 - not used<br>
-                  1 - 1hr or less<br>
-                  2 - +1 to 2hrs<br>
-                  3 - +2 to 3hrs<br>
-                  4 - +3 to 4hrs<br>
-              </td>
-            </tr>
-            <tr>
-              <td style="border:none;"></td>
-              <td>2+<br>Periods</td>
-              <td>Time Last Period Began</td>
-              <td>Time Last Period Ended<br>
-                  to Ob Time</td>
-              <td style="border-top:none;">5 - +4 to 5hrs<br>
-                  6 - +5 to 6hrs<br>
-                  7 - +6 to 12hrs<br>
-                  8 - +12hrs<br>
-                  9 - unknown</td>
-            </tr>
+    </main>
 
-            <tr>
-              <td>Dc</td>
-              <td>1<br>Period</td>
-              <td>Time Period Began To<br>
-                  Ob Time</td>
-              <td>Time Period Began To<br>
-                  Time Period Ended</td>
-              <td>0 - 1hr or less<br>
-                  1 - +1 to 3hrs<br>
-                  2 - +3 to 6hrs<br>
-                  3 - +6hrs<br>
-              </td>
-            </tr>
-            <tr>
-              <td style="border:none;"></td>
-              <td>2+<br>Periods</td>
-              <td>Time First Period Began<br>
-                  To Ob Time</td>
-              <td>Time First Period Began To<br>
-                  Time Last Period Ended</td>
-              <td>4 - + 1hr or less<br>
-                  5 - +1 to 3hrs<br>
-                  6 - +3 to 6hrs<br>
-                  7 - +6hrs<br>
-            </tr>
-          </table>
-          <p><b>Manobs Reference: 12.4.11.3.3</b></p>
-        </div>
-      </div> <!-- End Row -->
-    </div> <!-- End Container -->
+    <!-- Include the footer.html file -->
+    <footer id="footer"></footer>
 
-    <div class="container well rtdc_refs">
-      <h3>Manobs References</h3>
-      <p><b>Seventh Edition,<br>
-      Amendment 19, April 2015<br>
-      MANOBS - Manual of Surface Weather Observations 12 - 295</b></p>
-      <p><b>12.4.11.3.3</b><br>
-      Time of Precipitation Table: Rt - time at which precipitation, given by RRR,
-      began or ended. This information shall be obtained from columns 3 and 4 and
-      coded according to the following table: WMO Code 3552.</p>
-      <p><b><i>Note (1): </i></b>
-      If there is a choice, use the smaller code figure.
-      For example: if rain ended exactly four hours ago, use code figure 4.</p>
-      <p><b><i>Note (2): </i></b>
-      When a station has not been continuously staffed and a recording
-      rain gauge was not in operation throughout the period, it may be necessary
-      to code Rt as 9.</p>
-      <p><b><i>Note (3): </i></b>
-      Rt shall be coded with reference to the official time of observation.
-      When precipitation is occurring at the time of observation, Rt shall
-      refer to the "time precipitation began." When precipitation is not
-      occurring at the time of observation, Rt shall refer to the "time
-      precipitation ended," except: 1) If the coding of ww indicates that
-      precipitation has ended during the preceding hour (ww codes 20 - 27
-      and 29), Rt shall be coded to indicate the "time precipitation began."
-      2) When two or more periods of precipitation occur during a six -
-      hour period preceding the observation, the time (beginning or ending)
-      of the last period of precipitation shall be reported by Rt.
-      Occurrences of precipitation shall be considered as separate periods
-      of precipitation when separated by 15 minutes or more.</p>
-
-      <hr>
-
-      <p><b>Seventh Edition,<br>
-      Amendment 19, April 2015<br>
-      MANOBS - Manual of Surface Weather Observations 12 - 296</b></p>
-      <p><b>12.4.11.3.4</b><br>
-      Duration and character of precipitation table: WMO code 0833.</p>
-      <p><b><i>Note (1): </i></b>
-      If there is a choice, use the smaller code figure. For example, if a
-      single period of precipitation lasted exactly three hours, use code
-      figure 1.</p>
-      <p><b><i>Note (2): </i></b>
-      Occurrences of precipitation shall be considered as separate periods
-      of precipitation when separated by intervals of 15 minutes or more.</p>
-      <p><b><i>Note (3): </i></b>
-      If only one period of precipitation has occurred during the past six
-      hours, and is still occurring at the time of observation, the
-      duration is defined as the time elapsed from the beginning of
-      precipitation until the time of observation. If precipitation is not
-      occurring at the time of observation, the duration is the interval
-      from beginning to end of the precipitation (See 12.3.10.3.3, examples
-      2 to 5, 8, 9, 11, 13 to 16, and 18).</p>
-      <p><b><i>Note (4): </i></b>
-      If two or more periods of precipitation have occurred during the
-      past six hours, and precipitation is occurring at the time of
-      observation, the duration is defined as the time elapsed from the
-      beginning of the first period of precipitation, all or part of which
-      occurred during the past six hours, until the time of observation. If
-      precipitation is not occurring at the time of observation, the
-      duration is defined as the interval from the beginning of the first
-      period of precipitation to the end of the last period of precipitation
-      (See 12.3.10.3.3, examples 6, 7, and 10).</p>
-    </div>
-
-  </main> <!-- End of main content container -->
-
-  <!-- Include the footer.html file -->
-  <footer id="footer"></footer>
 </body>
+</html>

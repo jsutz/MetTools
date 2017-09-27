@@ -1,39 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
+    <title>Met > Resources</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- My Stylesheet -->
-    <link rel="stylesheet" href="bs_style.css">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- My Stylesheet -->
+    <link href="styles/base.css" type="text/css" rel="stylesheet">
+    <link href="styles/style.css" type="text/css" rel="stylesheet">
+
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <script>
-    $(function(){
-      $("#header").load("include/header.html");
-      $("#urls").load("include/urls.html");
-      $("#footer").load("include/footer.html");
-    });
+        $(function(){
+            $("#header").load("includes/header.html");
+            $("#urls").load("includes/resource-urls.html");
+            $("#footer").load("includes/footer.html");
+        });
     </script>
-  </head>
+</head>
 
 <body>
-  <!-- Include the header.html file here -->
-  <header id="header"></header>
 
-  <main> <!-- Main Content Container - Full Device Width, 90% Device Height, minimum-->
+    <!-- Include the header.html file here -->
+    <header id="header"></header>
 
-    <!-- Include the urls.html file here -->
-    <div id="urls" class="container"></div>
+    <!-- Main Content Container -->
+    <main class="container">
 
-  </main> <!-- End of main container -->
+        <!-- Include the urls.html file here -->
+        <div id="urls"></div>
 
-  <!-- Include the footer.html file here -->
-  <footer id="footer"></footer>
+        <!--
+
+        - Split up urls.html file into individual files for ease of maintaining
+        - Create scripts (like tools-nav scripts) to switch between frame content
+
+        -->
+
+    </main>
+
+    <!-- Include the footer.html file here -->
+    <footer id="footer"></footer>
+
 </body>
 </html>
