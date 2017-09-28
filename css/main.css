@@ -158,14 +158,13 @@ footer p{
  */
 
 .tools-nav, .tools-content{
-    min-height: 100%;
+    min-height: 100vh;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 .tools-nav{
-    margin-left: 12px;
-    padding: 0px 5px;
     border-right: 10px solid #e3e3e3;
 }
 
@@ -191,8 +190,6 @@ footer p{
 }
 
 .tools-content{
-    margin:0;
-    padding:0;
 }
 
 .tools-content iframe {
@@ -200,6 +197,11 @@ footer p{
     top: 0;
     left: 0;
     width: 100%;
-    min-height: 100%;
+    min-height: 100vh;
     box-sizing: border-box;
+}
+
+.no-gutter{
+    margin:0;
+    padding:0;
 }
