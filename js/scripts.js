@@ -3,5 +3,5 @@ function helloWorld() {
 }
 
 function loadRtdcCalc() {
-    document.getElementById('tools-viewport').src = "tools/rtdc/rtdc-calculator.html";
+    document.getElementById('tools-viewport').src = "rtdc.html";
 }
