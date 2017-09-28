@@ -1,54 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Met > Resources</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
 
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <title>Met -- Resources</title>
 
-    <!-- My Stylesheet -->
-    <link href="styles/base.css" type="text/css" rel="stylesheet">
-    <link href="styles/style.css" type="text/css" rel="stylesheet">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!-- My Stylesheets -->
+        <link type="text/css" rel="stylesheet" href="css/main.css">
 
-    <script>
-        $(function(){
-            $("#header").load("includes/header.html");
-            $("#urls").load("includes/resource-urls.html");
-            $("#footer").load("includes/footer.html");
-        });
-    </script>
-</head>
+        <!-- My scripts -->
 
-<body>
+        <script>
+            $(function(){
+                $("#header").load("includes/header.html");
+                $("#navigation").load("includes/navigation.html");
+                $("#urls").load("includes/resource-urls.html");
+                $("#footer").load("includes/footer.html");
+            });
+        </script>
 
-    <!-- Include the header.html file here -->
-    <header id="header"></header>
+    </head>
 
-    <!-- Main Content Container -->
-    <main class="container">
+    <body>
 
-        <!-- Include the urls.html file here -->
-        <div id="urls"></div>
+        <!-- Include the header.html file here -->
+        <header id="header"></header>
 
-        <!--
+        <!-- Include the navigation.html file -->
+        <nav id="navigation"></nav>
 
-        - Split up urls.html file into individual files for ease of maintaining
-        - Create scripts (like tools-nav scripts) to switch between frame content
+        <!-- Main Content Container -->
+        <main class="container">
 
-        -->
+            <!-- Include the urls.html file here -->
+            <div id="urls"></div>
 
-    </main>
+            <!--
 
-    <!-- Include the footer.html file here -->
-    <footer id="footer"></footer>
+            - Split up urls.html file into individual files for ease of maintaining
+            - Create scripts (like tools-nav scripts) to switch between frame content
 
-</body>
+            -->
+
+        </main>
+
+        <!-- Include the footer.html file here -->
+        <footer id="footer"></footer>
+
+    </body>
 </html>

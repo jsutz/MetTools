@@ -1,119 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Met > Home</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
 
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <title>Met -- Home</title>
 
-    <!-- My Stylesheet -->
-    <link href="styles/base.css" type="text/css" rel="stylesheet">
-    <link href="styles/style.css" type="text/css" rel="stylesheet">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!-- My Stylesheets -->
+        <link type="text/css" rel="stylesheet" href="css/main.css">
 
-    <script>
-        $(function(){
-            $("#header").load("includes/header.html");
-            $("#footer").load("includes/footer.html");
-        });
-    </script>
-</head>
+        <!-- My scripts -->
 
-<body>
+        <script>
+            $(function(){
+                $("#header").load("includes/header.html");
+                $("#navigation").load("includes/navigation.html");
+                $("#footer").load("includes/footer.html");
+            });
+        </script>
 
-    <!-- Include the header.html file -->
-    <header id="header"></header>
+    </head>
 
-    <div class="jumbotron">
+    <body>
 
-        <!-- Carousel Background Images -->
+        <!-- Include the header.html file -->
+        <header id="header"></header>
 
-    </div>
+        <!-- Include the navigation.html file -->
+        <nav id="navigation"></nav>
 
-    <!-- Main Content Container -->
-    <main class="container index-main">
+        <div class="jumbotron">
 
-        <!--  -->
-        <div class="row">
+            <!-- Carousel Background Images -->
+            <div class="container">
 
-            <div class="col-sm-4 col-xs-12">
-
-                <div class="thumbnail about"></div>
-
-            </div>
-
-            <div class="col-sm-4">
-
-                <div class="thumbnail about"></div>
-
-            </div>
-
-            <div class="col-sm-4">
-
-                <div class="thumbnail about"></div>
+                <p style="box-sizing: border-box; margin-top: 50px; padding: 10px; background-color: #c77; border-radius: 5px; color: #e3e3e3;">
+                This site is currently undergoing major reconstruction and some
+                features may be unavailable for a short time.
+                <br>
+                Sorry for any inconvenience.
+                <p>
 
             </div>
 
         </div>
 
-        <div class="row">
-            <div class="col-md-6">
+        <!-- Main Content Container -->
+        <main class="container index-main">
 
-                <h2>About This Site:</h2>
-                <hr>
-                <p>
-                The Met resources site was launched in early 2017 and was originally created with the aim of
-                providing a single repository of meteorological resources to aid technicians in their daily tasks.
-                <br>
-                The Resources page, provides a growing repository of url's for a wide range of meteorology
-                resources, including: publications, research papers, journals, a number of national and international
-                meteorological sites, along with, satellites, radars, cameras, aviation tools, and much more.
-                <br>
-                Along with a repository of url's, the Tools page, for now, provides only a single widget used
-                for calculating 909:RtDc codes, along with a manual calculation table and the associated Manobs
-                references. More tools will be added in the future.
-                <br>
-                This site is still undergoing construction and some features may not be fully functional at this time.
-                If you encounter issues, please contact the site administrator with details.
-                </p>
+            <!--  -->
+            <div class="row">
+
+                <div class="col-sm-4 col-xs-12">
+
+                    <div class="thumbnail about"></div>
+
+                </div>
+
+                <div class="col-sm-4">
+
+                    <div class="thumbnail about"></div>
+
+                </div>
+
+                <div class="col-sm-4">
+
+                    <div class="thumbnail about"></div>
+
+                </div>
+
             </div>
 
-            <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-6">
 
-                <h2>Report A Bug Or Give Feedback:</h2>
-                <hr>
-                <p>
-                The Met Resources site is continually being updated as more and more resources become available. If you
-                come across a bug, a broken link, or you simply have resources that you believe should be added, please do
-                not hesitate to contact the site administrator with a detailed message.
-                <br>
-                In the case of bugs, please provide as much information as possible, including: the subject tag “Bug Report”,
-                the error itself, the circumstances in which it occurred, where in the website it occurred, whether it is
-                repeatable or not, and, in the event the administrator must contact you further, your contact information.
-                <br>
-                Requests will be dealt with in a timely manner. Please keep in mind, however, that this is a side project and
-                support for it may cease as other projects arise.
-                <br>
-                Contact Information:
-                    <ul>
-                    <li>Author: Jake Sutton</li>
-                    <li>E-mail: sutton-0@hotmail.com</li>
-                    </ul>
-                </p>
-            </div>
-        </div> <!-- End Row -->
+                    <h2>About This Site:</h2>
+                    <hr>
+                    <p>
+                    The Met resources site was launched in early 2017 and was originally created with the aim of
+                    providing a single repository of meteorological resources to aid technicians in their daily tasks.
+                    <br>
+                    The Resources page, provides a growing repository of url's for a wide range of meteorology
+                    resources, including: publications, research papers, journals, a number of national and international
+                    meteorological sites, along with, satellites, radars, cameras, aviation tools, and much more.
+                    <br>
+                    Along with a repository of url's, the Tools page, for now, provides only a single widget used
+                    for calculating 909:RtDc codes, along with a manual calculation table and the associated Manobs
+                    references. More tools will be added in the future.
+                    <br>
+                    This site is still undergoing construction and some features may not be fully functional at this time.
+                    If you encounter issues, please contact the site administrator with details.
+                    </p>
+                </div>
 
-    </main> <!-- End of main container -->
+                <div class="col-md-6">
 
-    <!-- Include the footer.html file here -->
-    <footer id="footer"></footer>
+                    <h2>Report A Bug Or Give Feedback:</h2>
+                    <hr>
+                    <p>
+                    The Met Resources site is continually being updated as more and more resources become available. If you
+                    come across a bug, a broken link, or you simply have resources that you believe should be added, please do
+                    not hesitate to contact the site administrator with a detailed message.
+                    <br>
+                    In the case of bugs, please provide as much information as possible, including: the subject tag “Bug Report”,
+                    the error itself, the circumstances in which it occurred, where in the website it occurred, whether it is
+                    repeatable or not, and, in the event the administrator must contact you further, your contact information.
+                    <br>
+                    Requests will be dealt with in a timely manner. Please keep in mind, however, that this is a side project and
+                    support for it may cease as other projects arise.
+                    <br>
+                    Contact Information:
+                        <ul>
+                        <li>Author: Jake Sutton</li>
+                        <li>E-mail: sutton-0@hotmail.com</li>
+                        </ul>
+                    </p>
+                </div>
+            </div> <!-- End Row -->
 
-</body>
+        </main> <!-- End of main container -->
+
+        <!-- Include the footer.html file here -->
+        <footer id="footer"></footer>
+
+    </body>
 </html>
