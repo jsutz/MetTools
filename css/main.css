@@ -29,10 +29,6 @@ p br{
     margin-bottom: 10px;
 }
 
-ul li, ul a{
-    font-size: 16px;
-}
-
 ul li{
     list-style-type: none;
 }
@@ -110,8 +106,6 @@ footer{
 footer p{
     color: #fff;
   }
-
-
 
 /* ========================================================================== */
 
