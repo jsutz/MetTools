@@ -10,8 +10,9 @@ html, body{
 }
 
 html, body, header, nav, main, footer,
+div, section, img, p, ul, li, a,
 h1, h2, h3, h4, h5, h6,
-div, p, ul, li, a, img, {
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -27,6 +28,10 @@ p{
 
 p br{
     margin-bottom: 10px;
+}
+
+ul li, ul a{
+    font-size: 16px;
 }
 
 ul li{
@@ -107,8 +112,14 @@ footer p{
     color: #fff;
   }
 
+
+
 /* ========================================================================== */
 
+.container-fluid, .container, .jumbotron, .thumbnail
+{
+    box-sizing: border-box;
+}
 /*
  * Index.html specific styles
  *
@@ -119,7 +130,7 @@ footer p{
     height: 500px;
     margin: 0;
     padding: 0;
-    background-color: rgba(0,0,0,.5);
+    background-color: rgba(0,0,0,.8);
 }
 
 .index-main{
