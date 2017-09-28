@@ -42,6 +42,10 @@ form h4{
   margin-left: 2px;
 }
 
+.form-group hr{
+    padding: 5px 0px;
+}
+
 #synoPeriod{
   width: 80px;
 }
