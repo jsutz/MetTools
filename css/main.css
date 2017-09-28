@@ -191,7 +191,8 @@ footer p{
 }
 
 .tools-content{
-    padding-left:0;
+    margin:0;
+    padding:0;
 }
 
 .tools-content iframe {
@@ -199,6 +200,6 @@ footer p{
     top: 0;
     left: 0;
     width: 100%;
-    min-height: 100vh;
+    min-height: 100%;
     box-sizing: border-box;
 }
