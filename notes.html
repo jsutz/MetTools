@@ -43,9 +43,24 @@
         <main class="container">
 
             <div class="row">
-                <div class="col-md-4 no-gutter">
-                    <ul>
-                        <li><a href="./met/notes/snowfall.txt" target="_blank">Reporting Snowfall</a></li>
+                <div class="col-md-3 no-gutter">
+                    <div class="notes-nav">
+
+                        <h2>Notes</h2>
+                        <hr>
+
+                        <ul>
+                            <a href="#" onclick='$("#notes").load("./notes/snowfall.html");return false;'>
+                                Reporting Snowfall</a>
+                            <hr>
+                            <a href="">More to come...</a>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div class="col-md-9 no-gutter">
+                    <div id="notes">Notes Landing Page</div>
                 </div>
             </div>
 
