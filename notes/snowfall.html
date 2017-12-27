@@ -1,71 +1,152 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
+<h2>Reporting Snowfall</h2>
+<hr>
 
-        <title>Met -- Notes</title>
+<h3>Metars and Specials</h3>
 
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<h4>Type:</h4>
 
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <!-- jQuery library -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <!-- Latest compiled JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <h5 style="margin-left: 20px; border-bottom: 2px solid grey; display: inline;">Showers (SHSN)</h5>
+    <ul style="margin-left: 20px;">
+        <li>produced by cumuliform cloud;</li>
+        <li>often, but not always, begin and end abruptly, typically in short periods,
+        however, can last for much longer, usually with rapid fluctuations in
+        intensity;</li>
+    </ul>
 
-        <!-- My Stylesheets -->
-        <link type="text/css" rel="stylesheet" href="./met/css/main.css">
+    <h5 style="margin-left: 20px; border-bottom: 2px solid grey; display: inline;">Continuous (SN)</h5>
+    <ul style="margin-left: 20px;">
+        <li>produced by stratiform cloud, usually associated with the approach of a warm front;</li>
+        <li>can be either continuous OR intermittent;</li>
+        <li>considered continuous if it continues without a break for at least one hour preceding
+        the time of observation, OR continues without a break since beginning within the hour
+        preceding the observation;</li>
+    </ul>
 
-        <!-- My scripts -->
-        <script type="text/javascript" language="javascript" src="./met/js/scripts.js"></script>
+    <h5 style="margin-left: 20px; border-bottom: 2px solid grey; display: inline;">Intermittent</h5>
+    <ul style="margin-left: 20px;">
+        <li>precipitation that is not showery in nature is considered intermittent when it has
+        stopped and recommenced at least once within the hour preceding the observation;</li>
+    </ul>
 
-        <!-- Inline scripts -->
-        <script type="text/javascript">
-            $(function(){
-                $("#header").load("./met/includes/header.html");
-                $("#navigation").load("./met/includes/navigation.html");
-                $("#footer").load("./met/includes/footer.html");
-            });
-        </script>
+<h4>Intensity:</h4>
 
-    </head>
+    <p style="margin-left:20px;">Intensity SHALL be determined by visibility;</p>
+    <p style="margin-left:20px;">Applicable to: SN, SHSN, SG, GS, DZ, FZDZ;</p>
 
-    <body>
+    <ul style="margin-left:20px;">
+        <li>LGT : Visibility of 5/8 or more;</li>
+        <li>MDT : If alone AND Visibility of 1/2 or 3/8;</li>
+        <li>HVY : If alone AND visibility of 0, 1/8, or 1/4;</li>
+    </ul>
 
-        <!-- Include the header.html file -->
-        <header id="header"></header>
+    <p style="margin-left:20px;">* Alone: occurring with no other precipitation;
+    OR any other obstructions to vision;</p>
 
-        <!-- Include the navigation.html file -->
-        <nav id="navigation"></nav>
+<h4>Precipitation types recorded as snowfall amount:</h4>
 
-        <!-- Main Content Container -->
-        <main class="container">
+    <ul style="margin-left:20px;">
+        <li>SN, SHSN, ... </li>
+    </ul>
 
-            <div class="row">
-                <div class="col-md-3 no-gutter">
-                    <div class="notes-nav">
+<h4>Snowfall Remarks:</h4>
 
-                        <h2>Notes</h2>
-                        <hr>
+    <h5 style="margin-left: 20px; border-bottom: 2px solid grey; display: inline;">/Sss/: MANOBS 10.2.19.9 to 10.2.19.9.3</h5>
+    <ul style="margin-left:20px;">
+        <li>Accumulating depth of newly fallen snow, since the last main synoptic report,
+        measured with a ruler, and taken from the ground and/or approved weaver board;</li>
+        <li>Snow depth is checked at each METAR, and is rounded to the nearest whole
+        centimeter;</li>
+        <li>SHALL be reported only when the rounded accumulated value equals or exceeds 1cm,
+        OR exceeds the previously reported value by 1cm or more;</li>
+        <li>Melting and wind will effect this amount; If all of the snow melts by the time
+        the METAR is taken, /Sss/ will be omitted;</li>
+    </ul>
 
-                        <ul>
-                            <a href="#" onclick='$("#notes").load("./notes/snowfall.html");return false;'>
-                                Reporting Snowfall</a>
-                        </ul>
+<h4>Recording Mixed Precipitation:</h4>
 
-                    </div>
-                </div>
 
-                <div class="col-md-9 no-gutter">
-                    <div id="notes">Notes Landing Page</div>
-                </div>
-            </div>
 
-        </main>
+<h3>Synoptic Observations</h3>
 
-        <!-- Include the footer.html file -->
-        <footer id="footer"></footer>
+    <h5 style="margin-left: 20px; border-bottom: 2px solid grey; display: inline;">Col. 9: MANOBS 13.3.8</h5>
+    <ul style="margin-left:20px;">
+        <li>Snowfall amount, taken from the ground, recorded in centimeters and tenths;</li>
+        <li>When there is less than a measurable amount (> 0.2cm), but snow occurred within the
+        period, record as "TR";</li>
+        <li>Record "0" for none;</li>
+    </ul>
 
-    </body>
-</html>
+    <h5 style="margin-left: 20px; border-bottom: 2px solid grey; display: inline;">Col. 10: MANOBS 13.3.9</h5>
+    <ul style="margin-left:20px;">
+        <li>Water equivalent, taken from the Nipher Snow Gauge, recorded in millimeters and
+        tenths using a graduated cylinder;</li>
+        <li>For stations without a snow gauge, the water-equivalent amount SHALL be estimated (snow
+        in cm / 10);</li>
+    </ul>
+
+    <h5 style="margin-left: 20px; border-bottom: 2px solid grey; display: inline;">Col. 11: MANOBS 13.3.10</h5>
+    <ul style="margin-left:20px;">
+        <li>Rainfall amount, taken from Type B Rain Gauge;</li>
+        <li>recorded in millimeters and tenths;</li>
+    </ul>
+
+    <h5 style="margin-left: 20px; border-bottom: 2px solid grey; display: inline;">Col. 12: MANOBS 13.3.11</h5>
+    <ul style="margin-left:20px;">
+        <li>Total 6hr precipitation amount, all types, recorded in millimeters and tenths;</li>
+    </ul>
+
+    <h5 style="margin-left: 20px; border-bottom: 2px solid grey; display: inline;">Col. 13: MANOBS 13.3.12</h5>
+    <ul style="margin-left:20px;">
+        <li>Total 24hr precipitation amount, all types, recorded in millimeters and tenths;</li>
+    </ul>
+
+    <h5 style="margin-left: 20px; border-bottom: 2px solid grey; display: inline;">Col. 14: MANOBS 13.3.13</h5>
+    <ul style="margin-left:20px;">
+        <li>Depth of snow on the ground, recorded in whole centimeters, rounded to the nearest;</li>
+    </ul>
+
+    <h5 style="margin-left: 20px; border-bottom: 2px solid grey; display: inline;">4E'sss: MANOBS 12.4.4</h5>
+    <ul style="margin-left:20px;">
+        <li>Depth of snow on the ground, in whole centimeters, and taken from column 14;</li>
+        <li>SHALL be recorded at 12z when snow, ice, or any solid precipitation is on the surface;</li>
+        <li>Otherwise, recorded at 18z, 00z, and 06z ONLY when some form of solid precipitation is on
+        the surface AND precipitation, of any kind, has occurred at the station within the current
+        synoptic period;</li>
+    </ul>
+
+    <h5 style="margin-left: 20px; border-bottom: 2px solid grey; display: inline;">931ss: MANOBS 12.4.11 (Para: 2) and MANOBS 12.4.11.3.5 (Encoding Table)</h5>
+    <ul style="margin-left:20px;">
+        <li>Depth of newly fallen snow, prior to any melting (basically, what would have been had
+        melting not occurred), transmitted in whole centimeters, the rounded value taken from
+        column 9;</li>
+    </ul>
+
+    <h5 style="margin-left: 20px; border-bottom: 2px solid grey; display: inline;">1ssss:</h5>
+    <ul>
+        <li>Snowfall, in centimeters and tenths, from column 9;</li>
+    </ul>
+
+    <h5 style="margin-left: 20px; border-bottom: 2px solid grey; display: inline;">2SwSwSwSw:</h5>
+    <ul>
+        </li>Snow Water Equivalent, in millimeters and tenths, from column 10;</li>
+    </ul>
+
+<h3>Equipment Procedures</h3>
+
+        <h5 style="margin-left: 20px; border-bottom: 2px solid grey; display: inline;">Nipher Snow Gauge:</h5>
+        <ul>Coming soon.</ul>
+
+        <h5 style="margin-left: 20px; border-bottom: 2px solid grey; display: inline;">Type B Rain Gauge:</h5>
+        <ul>Coming soon.</ul>
+
+        <h5 style="margin-left: 20px; border-bottom: 2px solid grey; display: inline;">Tipping Bucket Rain Gauge:</h5>
+        <ul>Coming soon.</ul>
+
+        <h5 style="margin-left: 20px; border-bottom: 2px solid grey; display: inline;">Weaver Board:</h5>
+        <ul>Coming soon.</ul>
+
+        <h5 style="margin-left: 20px; border-bottom: 2px solid grey; display: inline;">Snow Ruler:</h5>
+        <ul>Coming soon.</ul>
+
+        <h5 style="margin-left: 20px; border-bottom: 2px solid grey; display: inline;">Graduated Cylinder:</h5>
+        <ul>Coming soon.</ul>
