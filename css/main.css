@@ -191,15 +191,7 @@ footer p{
 }
 
 .tools-content{
-}
-
-.tools-content iframe {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    min-height: 100vh;
-    box-sizing: border-box;
+    margin-left: 20px;
 }
 
 .no-gutter{
