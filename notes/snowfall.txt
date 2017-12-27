@@ -1,1 +1,142 @@
+================================================================================
 
+    Recording Snowfall
+    Equipment Procedures
+
+================================================================================
+
+    Recording Snowfall
+    ==================
+
+        Metars and Specials
+        -------------------
+
+        Type:
+
+            Showers (SHSN)  : produced by cumuliform cloud;
+                            : often, but not always, begin and end abruptly,
+                              typically in short periods, however, can last for
+                              much longer, usually with rapid fluctuations in
+                              intensity;
+
+            Continuous (SN) : produced by stratiform cloud, usually associated
+                              with the approach of a warm front;
+                            : can be either continuous OR intermittent;
+                            : considered continuous if it continues without a
+                              break for at least one hour preceding the time of
+                              observation, OR continues without a break since
+                              beginning within the hour preceding the
+                              observation;
+
+            Intermittent    : precipitation that is not showery in nature is
+                              considered intermittent when it has stopped and
+                              recommenced at least once within the hour
+                              preceding the observation;
+
+        Intensity:
+
+            Determined by visibility;
+            Applicable to: SN, SHSN, SG, GS, DZ, FZDZ;
+
+            -SN, -SHSN  : Visibility of 5/8 or more;
+             SN,  SHSN  : If alone AND Visibility of 1/2 or 3/8;
+            +SN, +SHSN  : If alone AND visibility of 0, 1/8, or 1/4;
+
+                        * Alone: occurring with no other precipitation,
+                          OR any other obstructions to vision;
+
+        Types recorded as snowfall amount:
+
+            : ...
+
+        Snowfall Remarks:
+
+            /Sss/   : MANOBS 10.2.19.9 (10.2.19.9.1 to 10.2.19.9.3)
+
+                    : Accumulating depth of newly fallen snow, since the last
+                      main synoptic report, measured with a ruler, and taken
+                      from the ground and/or approved weaver board;
+                    : Snow depth is checked at each METAR, and is rounded to
+                      the nearest whole centimeter;
+                    : SHALL be reported only when the rounded accumulated value
+                      equals or exceeds 1cm, OR exceeds the previously reported
+                      value by 1cm or more;
+
+                    * Melting and wind will effect this amount;
+                   ** If all of the snow melts by the time the METAR is taken,
+                      /Sss/ will not be recorded;
+
+        Recording Mixed Precipitation:
+
+
+
+        Synoptic Observations
+        ---------------------
+
+            Col.  9 : MANOBS 13.3.8
+
+                    : Snowfall amount, taken from the ground,
+                      recorded in centimeters and tenths;
+                    : When there is less than a measurable amount (> 0.2cm),
+                      but snow occurred within the period, record as "TR";
+                    : Record "0" for none;
+
+            Col. 10 : MANOBS 13.3.9
+
+                    : Water equivalent, taken from the Nipher Snow Gauge,
+                      recorded in millimeters and tenths using a graduated
+                      cylinder;
+                    * For stations without a snow gauge, the water-equivalent
+                      amount SHALL be estimated (snow in cm / 10);
+                        i.e. Snow   = 1.4cm
+                             Equiv. = 1.4 / 10
+                                    = 0.14mm
+
+            Col. 11 : MANOBS 13.3.10
+
+                    : Rainfall amount, taken from Type B Rain Gauge;
+                      recorded in millimeters and tenths;
+
+            Col. 12 : MANOBS 13.3.11
+
+                    : Total 6hr precipitation amount, all types,
+                      recorded in millimeters and tenths;
+
+            Col. 13 : MANOBS 13.3.12
+
+                    : Total 24hr precipitation amount, all types,
+                      recorded in millimeters and tenths;
+
+            Col. 14 : MANOBS 13.3.13
+
+                    : Depth of snow on the ground,
+                      recorded in whole centimeters, rounded to the nearest;
+
+            4E'sss  : MANOBS 12.4.4
+
+                    : Depth of snow on the ground, in whole centimeters, and
+                      taken from column 14;
+                    : SHALL be recorded at 12z when snow, ice, or any solid
+                      precipitation is on the surface;
+                    : Otherwise, recorded at 18z, 00z, and 06z ONLY when some
+                      form of solid precipitation is on the surface AND
+                      precipitation, of any kind, has occurred at the station
+                      within the current synoptic period;
+                    :
+
+            931ss   : MANOBS 12.4.11 (Para: 2)
+                    : MANOBS 12.4.11.3.5 (Encoding Table)
+
+                    : Depth of newly fallen snow, prior to any melting
+                      (basically, what would have been had melting not
+                      occurred), transmitted in whole centimeters, the rounded
+                      value taken from column 9;
+
+            1ssss       : Snowfall, in centimeters and tenths, from column 9;
+            2SwSwSwSw   : Snow Water Equivalent, in millimeters and tenths,
+                          from column 10;
+
+    Equipment Procedures
+    --------------------
+
+        : ...
