@@ -1,1 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
 
+        <title>Met -- Notes</title>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <!-- My Stylesheets -->
+        <link type="text/css" rel="stylesheet" href="css/main.css">
+
+        <!-- My scripts -->
+        <script type="text/javascript" language="javascript" src="js/scripts.js"></script>
+
+        <!-- Inline scripts -->
+        <script type="text/javascript">
+            $(function(){
+                $("#header").load("includes/header.html");
+                $("#navigation").load("includes/navigation.html");
+                $("#footer").load("includes/footer.html");
+            });
+        </script>
+
+    </head>
+
+    <body>
+
+        <!-- Include the header.html file -->
+        <header id="header"></header>
+
+        <!-- Include the navigation.html file -->
+        <nav id="navigation"></nav>
+
+        <!-- Main Content Container -->
+        <main class="container">
+
+            <div class="row">
+                <div class="col-md-4 no-gutter">
+                    <ul>
+                        <li><a href="/notes/snowfall.txt" target="_blank">Reporting Snowfall</a></li>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- Include the footer.html file -->
+        <footer id="footer"></footer>
+
+    </body>
+</html>
