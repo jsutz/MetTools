@@ -15,17 +15,17 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
         <!-- My Stylesheets -->
-        <link type="text/css" rel="stylesheet" href="css/main.css">
+        <link type="text/css" rel="stylesheet" href="./met/css/main.css">
 
         <!-- My scripts -->
-        <script type="text/javascript" language="javascript" src="js/scripts.js"></script>
+        <script type="text/javascript" language="javascript" src="./met/js/scripts.js"></script>
 
         <!-- Inline scripts -->
         <script type="text/javascript">
             $(function(){
-                $("#header").load("includes/header.html");
-                $("#navigation").load("includes/navigation.html");
-                $("#footer").load("includes/footer.html");
+                $("#header").load("./met/includes/header.html");
+                $("#navigation").load("./met/includes/navigation.html");
+                $("#footer").load("./met/includes/footer.html");
             });
         </script>
 
@@ -46,26 +46,20 @@
                 <div class="col-md-3 no-gutter">
                     <div class="tools-nav">
 
-                        <h3 style="margin:10px 0px;">Tools</h3>
+                        <h2>Tools</h2>
                         <hr>
 
-                        <ul class="tools-nav-buttons">
-
-                            <input type="button" value="RtDc Calculator" onclick="loadRtdcCalc();" />
-
-                            <hr><li>More To Come...</li>
-
+                        <ul>
+                            <a href="" onclick='$("#tools").load("./met/rtdc.html");return false;'>RtDc Calculator</a>
+                            <hr>
+                            <a href="">More To Come...</a>
                         </ul>
 
                     </div>
                 </div>
 
                 <div class="col-md-9 no-gutter">
-                    <div class="tools-content">
-
-                        <iframe id="tools-viewport" src="#" frameborder="0" scrolling="auto"></iframe>
-
-                    </div>
+                    <div id="tools">Tools Landing Page</div>
                 </div>
             </div>
 
