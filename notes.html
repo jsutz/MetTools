@@ -1,73 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
+<!-- Notes Content -->
+    <div class="row no-gutter">
 
-        <title>Met -- Notes</title>
+        <!-- Left Column - Side Navigation -->
+        <div class="col-md-3 no-gutter">
 
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <h2>Notes</h2>
+            <hr></hr>
 
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <!-- jQuery library -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <!-- Latest compiled JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+            <ul class="side-nav">
+                <li><a href="#" onclick='$("#content-header").html("Reporting Snowfall");$("#notes").load("Notes/snowfall.html");return false;'>Reporting Snowfall</a></li>
+                <li><a href="#" onclick='$("#notes").load("Notes/fog.html");return false;'>Reporting Fog</a></li>
+                <li><a href="#" onclick='$("#notes").load("Notes/smoke.html");return false;'>Reporting Smoke</a></li>
+                <li><a href="#" onclick='$("#notes").load("Notes/7ww.html");return false;'>Past and Present Weather</a></li>
+            </ul>
 
-        <!-- My Stylesheets -->
-        <link type="text/css" rel="stylesheet" href="css/main.css">
+        </div>
 
-        <!-- My scripts -->
-        <script type="text/javascript" language="javascript" src="js/scripts.js"></script>
+        <!-- Right Column - Main Content -->
+        <div class="col-md-9 no-gutter">
 
-        <!-- Inline scripts -->
-        <script type="text/javascript">
-            $(function(){
-                $("#header").load("includes/header.html");
-                $("#navigation").load("includes/navigation.html");
-                $("#footer").load("includes/footer.html");
-            });
-        </script>
+            <h2 id="content-header">...</h2>
+            <hr></hr>
 
-    </head>
+            <div id="notes">
 
-    <body>
+                <p>Notes Landing Page</p>
 
-        <!-- Include the header.html file -->
-        <header id="header"></header>
-
-        <!-- Include the navigation.html file -->
-        <nav id="navigation"></nav>
-
-        <!-- Main Content Container -->
-        <main class="container">
-
-            <div class="row">
-                <div class="col-md-3 no-gutter">
-                    <div class="notes-nav">
-
-                        <h2>Notes</h2>
-                        <hr>
-
-                        <ul>
-                            <a href="" onclick='$("#notes").load("notes/snowfall.html");return false;'>
-                                Reporting Snowfall</a>
-                            <br>
-                            <a href="">More to come...</a>
-                        </ul>
-
-                    </div>
-                </div>
-
-                <div class="col-md-9 no-gutter">
-                    <div id="notes" style="margin-left:20px;">Notes Landing Page</div>
-                </div>
             </div>
-
-        </main>
-
-        <!-- Include the footer.html file -->
-        <footer id="footer"></footer>
-
-    </body>
-</html>
+        </div>
+    </div>
+<!-- Notes Content -->
