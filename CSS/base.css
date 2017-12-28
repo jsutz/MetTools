@@ -1,0 +1,99 @@
+html, body, header, nav, main, footer,
+div, section, iframe, img, p, ul, ol,
+li, a, h1, h2, h3, h4, h5, h6
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+    background-color: #333333;
+}
+
+/* Header and Top Navigation */
+.header, .nav{
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    background-color: #337AB7;
+}
+
+.header{
+    height: 80px;
+}
+
+.nav{
+    top: 60px;
+    height: 40px;
+}
+
+.header h1 a, .nav a{
+    font-size: 1.4em;
+    color: #EEEEEE;
+}
+
+.header h1{
+    margin: 0;
+    padding-top: 10px;
+}
+
+.nav a{
+    line-height: 40px;
+    padding: 0 10px 0 2px;
+}
+
+/* Main Content */
+main{
+    position: relative;
+    z-index: 0;
+    top: 100px;
+    min-height: 100%;
+    background-color: #EEEEEE;
+}
+
+main.container{
+    padding: 10px;
+}
+
+main hr{
+    margin: 10px 0;
+    border-color: #333333;
+}
+
+/* Footer */
+.footer{
+    position: relative;
+    z-index: 0;
+    top: 100px;
+    height: 200px;
+    width: 100%;
+}
+
+.footer nav{
+    width: 100%;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.footer nav a{
+    padding: 10px 10px;
+    line-height: 40px;
+    font-size: 1.4em;
+    color: #EEEEEE;
+}
+
+.footer p{
+    width: 100%;
+    text-align: center;
+    font-size: 1.2em;
+    color: #EEEEEE;
+}
+
+/* Extras */
+.no-gutter{
+    margin: 0;
+    padding: 0;
+}

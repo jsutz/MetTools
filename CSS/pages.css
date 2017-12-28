@@ -1,0 +1,35 @@
+/* Side Navigation */
+.side-nav{
+    margin-top: 0;
+}
+.side-nav li{
+    display: block;
+}
+
+.side-nav a{
+    font-size: 1.3em;
+}
+
+/* Generic Page Styles */
+.content h3{
+    margin: 10px 0;
+}
+.content h4{
+    margin: 10px;
+}
+.content h5{
+    margin: 10px 20px;
+    border-bottom: 2px solid #777777;
+    display: inline;
+}
+.content p,
+.content ul{
+    margin: 10px 20px;
+}
+.content ul li{
+    margin-left: 30px;
+}
+
+.content p, .content li, .content a{
+    font-size: 1.1em;
+}
