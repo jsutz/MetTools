@@ -14,35 +14,40 @@ html, body{
 }
 
 /* Header and Top Navigation */
-.header, .nav{
+.header{
     position: fixed;
-    z-index: 10;
+    z-index: 5;
+    height: 60px;
     width: 100%;
     background-color: #337AB7;
 }
-
-.header{
-    height: 80px;
+.header .container{
+    padding: 0;
+}
+.header h1{
+    margin: 0;
+    padding-top: 5px;
+    display: inline-block;
 }
 
-.nav{
-    top: 60px;
-    height: 40px;
-}
-
-.header h1 a, .nav a{
+.header h1 a,
+.nav a{
     font-size: 1.4em;
     color: #EEEEEE;
 }
-
-.header h1{
-    margin: 0;
-    padding-top: 10px;
+.header h1 a:hover,
+.nav a:hover{
+    color: #004784;
+    text-decoration: none;
 }
 
+.nav{
+    margin-left: 20px;
+    display: inline-block;
+}
 .nav a{
-    line-height: 40px;
     padding: 0 10px 0 2px;
+    line-height: 40px;
 }
 
 /* Main Content */
@@ -96,4 +101,14 @@ main hr{
 .no-gutter{
     margin: 0;
     padding: 0;
+}
+
+.construction{
+    background-color: rgba(200,0,0,0.75);
+    text-align: center;
+    font-size: 20px;
+    color: #EEEEEE;
+}
+.construction h1{
+    color: #333333;
 }
