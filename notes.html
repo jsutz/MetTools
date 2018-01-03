@@ -8,10 +8,25 @@
             <hr></hr>
 
             <ul class="side-nav">
-                <li><a href="#" onclick='$("#content-header").html("Reporting Snowfall");$("#notes").load("Notes/snowfall.html");return false;'>Reporting Snowfall</a></li>
-                <li><a href="#" onclick='$("#notes").load("Notes/fog.html");return false;'>Reporting Fog</a></li>
-                <li><a href="#" onclick='$("#notes").load("Notes/smoke.html");return false;'>Reporting Smoke</a></li>
-                <li><a href="#" onclick='$("#notes").load("Notes/7ww.html");return false;'>Coding 7wwW<sub>1</sub>W<sub>2</sub></a></li>
+                <li><a href="#" onclick='$("#content-header").html("Reporting Snowfall");
+                                            $("#notes").load("Notes/snowfall.html");
+                                            return false;'>Reporting Snowfall</a></li>
+
+                <li><a href="#" onclick='$("#content-header").html("Reporting Fog");
+                                            $("#notes").load("Notes/fog.html");
+                                            return false;'>Reporting Fog</a></li>
+
+                <li><a href="#" onclick='$("#content-header").html("Reporting Smoke");
+                                            $("#notes").load("Notes/smoke.html");
+                                            return false;'>Reporting Smoke</a></li>
+
+                <li><a href="#" onclick='$("#content-header").html("Coding 7wwW&lt;sub&gt;1&lt;/sub&gt;W&lt;sub&gt;2&lt;/sub&gt;");
+                                            $("#notes").load("Notes/7ww.html");
+                                            return false;'>Coding 7wwW<sub>1</sub>W<sub>2</sub></a></li>
+
+                <li><a href="#" onclick='$("#content-header").html("Monitoring Aid");
+                                            $("#notes").load("Notes/smoke.html");
+                                            return false;'>Monitoring Standards</a></li>
             </ul>
 
         </div>
@@ -23,9 +38,7 @@
             <hr></hr>
 
             <div id="notes">
-
                 <p>Notes Landing Page</p>
-
             </div>
         </div>
     </div>
