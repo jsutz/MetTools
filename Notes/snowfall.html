@@ -1,166 +1,177 @@
 <div class="content">
 
-    <h3>Metars and Specials</h3>
+    <h3>Precipitation Type:</h3>
 
-    <h4>Type:</h4>
-
-        <h5>Showers (SHSN)</h5>
-        <ul>
-            <li>produced by cumuliform cloud;</li>
-            <li>often, but not always, begin and end abruptly, typically in short periods,
-            however, can last for much longer, usually with rapid fluctuations in
-            intensity;</li>
-        </ul>
-
-        <h5>Continuous (SN)</h5>
-        <ul>
-            <li>produced by stratiform cloud, usually associated with the approach of a warm front;</li>
-            <li>can be either continuous OR intermittent;</li>
-            <li>considered continuous if it continues without a break for at least one hour preceding
-            the time of observation, OR continues without a break since beginning within the hour
-            preceding the observation;</li>
-        </ul>
-
-        <h5>Intermittent</h5>
-        <ul>
-            <li>precipitation that is not showery in nature is considered intermittent when it has
-            stopped and recommenced at least once within the hour preceding the observation;</li>
-        </ul>
-
-    <h4>Intensity:</h4>
-
-        <p>Intensity SHALL be determined by visibility;</p>
-        <p>Applicable to: SN, SHSN, SG, GS, DZ, FZDZ;</p>
-        <ul>
-            <li>LGT : Visibility of 5/8 or more;</li>
-            <li>MDT : If alone AND Visibility of 1/2 or 3/8;</li>
-            <li>HVY : If alone AND visibility of 0, 1/8, or 1/4;</li>
-        </ul>
-        <p>* Alone: occurring with no other precipitation;
-        OR any other obstructions to vision;</p>
-
-        <h4>Precipitation types recorded as snowfall amount:</h4>
+        <h4>Precipitation types that are included in the measuring of snowfall amount:</h4>
         <ul>
             <li>SN, SHSN, ... </li>
         </ul>
 
-    <h4>Snowfall Remarks:</h4>
-
-        <h5>/Sss/: MANOBS 10.2.19.9 to 10.2.19.9.3</h5>
+        <h4>Showers (SHSN)</h4>
         <ul>
-            <li>Accumulating depth of newly fallen snow, since the last main synoptic report,
-            measured with a ruler, and taken from the ground and/or approved weaver board;</li>
-            <li>Snow depth is checked at each METAR, and is rounded to the nearest whole
-            centimeter;</li>
-            <li>SHALL be reported only when the rounded accumulated value equals or exceeds 1cm,
-            OR exceeds the previously reported value by 1cm or more;</li>
-            <li>Melting and wind will effect this amount; If all of the snow melts by the time
-            the METAR is taken, /Sss/ will be omitted;</li>
+            <li>Typically produced by cumuliform cloud;</li>
+            <li>Often, but not always, begins and ends abruptly - typically in short periods,
+            however, can last for much longer - usually with rapid fluctuations in
+            intensity;</li>
         </ul>
 
-    <h4>Recording Mixed Precipitation:</h4>
-
-        <br />
-
-<h3>Synoptic Observations</h3>
-
-    <h4>Section I</h4>
-
-        <h5>Col. 9: MANOBS 13.3.8</h5>
+        <h4>Continuous (SN)</h4>
         <ul>
-            <li>Snowfall amount, taken from the ground, recorded in centimeters and tenths;</li>
-            <li>When there is less than a measurable amount (&lt; 0.2cm), but snow was reported within
-            the current synoptic period, 4E'sss SHALL be recorded as "TR"; and</li>
-            <li>SHALL be recorded as "0" for none;</li>
+            <li>Typically produced by stratiform cloud;</li>
+            <li>Usually associated with the approach of a warm front;</li>
+            <li>Can be both, continuous OR intermittent;</li>
+            <ul>
+                <li>Considered continuous if it continues without a break for at least one hour preceding
+                the time of observation OR continues without a break since beginning within the hour
+                preceding the observation;</li>
+                <li>Precipitation that is not showery in nature is considered intermittent when it has
+                stopped and recommenced at least once within the hour preceding the observation;</li>
+            </ul>
         </ul>
 
-        <h5>Col. 10: MANOBS 13.3.9</h5>
+        <h4>Intensity:</h4>
         <ul>
-            <li>Water equivalent, taken from the Nipher Snow Gauge, recorded in millimeters and
-            tenths using a graduated cylinder;</li>
-            <li>For stations without a snow gauge, the water-equivalent amount SHALL be estimated (snow
-            in cm / 10);</li>
+            <li>The intensity of snowfall SHALL be determined by visibility;</li>
+            <li>This applies to: SN, SHSN, SG, GS, DZ, FZDZ;</li>
+            <ul>
+                <li>LGT : Visibility of 5/8 or more;</li>
+                <li>MDT : If alone AND Visibility of 1/2 or 3/8;</li>
+                <li>HVY : If alone AND visibility of 0, 1/8, or 1/4;</li>
+            </ul>
+            <li>* Alone: occurring with no other precipitation; OR any other obstructions to vision;</li>
         </ul>
 
-        <h5>Col. 11: MANOBS 13.3.10</h5>
+        <br></br>
+
+    <h3>Reporting Snowfall - Metars, Specials and Check Obs</h3>
+
+        <h4>Snowfall Remarks:</h4>
+
+        <p><strong>/Sss/ (Depth Of Newly Fallen Snow):</strong> MANOBS 10.2.19.9 to 10.2.19.9.3</p>
         <ul>
-            <li>Rainfall amount, taken from Type B Rain Gauge;</li>
-            <li>recorded in millimeters and tenths;</li>
+            <li>Depth of newly fallen snow, since the last main synoptic report;</li>
+             <li>It is measured prior to the transmission of the METAR, only when snowfall is occurring,
+            or has occurred within the hour preceding the METAR;</li>
+            <li>It is taken from the approved weaver board, measured with the snow ruler and rounded to
+            the nearest whole centimeter;</li>
+            <li>/Sss/ SHALL be reported only when the rounded hourly value equals or exceeds 1cm;</li>
+            <li>One half of the weaver board should be cleared each hour in which snow has fallen, while
+            the other half should be cleared at each synoptic observation, when snow has fallen. This
+            ensures accurate measurements are being taken at each hourly and synoptic observation.
+            <li>Remember to keep in mind, melting and wind will effect this amount. If all of the newly
+            fallen snow has melted by the time the METAR is taken, /Sss/ will be omitted;</li>
         </ul>
 
-        <h5>Col. 12: MANOBS 13.3.11</h5>
-        <ul>
-            <li>Total 6hr precipitation amount, all types, recorded in millimeters and tenths;</li>
-        </ul>
+        <h4>Recording Mixed Precipitation:</h4>
 
-        <h5>Col. 13: MANOBS 13.3.12</h5>
-        <ul>
-            <li>Total 24hr precipitation amount, all types, recorded in millimeters and tenths;</li>
-        </ul>
+        <p><strong>...</strong></p>
 
-        <h5>Col. 14: MANOBS 13.3.13</h5>
-        <ul>
-            <li>Depth of snow on the ground, recorded in whole centimeters, rounded to the nearest;</li>
-        </ul>
+        <br></br>
 
-    <h4>Section III</h4>
+    <h3>Reporting Snowfall - Synoptic Observations</h3>
 
-        <h5>4E'sss: MANOBS 12.4.4</h5>
-        <ul>
-            <li>Depth of snow on the ground, in whole centimeters, and taken from column 14;</li>
-            <li>SHALL be recorded at 12z when snow, ice, or any solid precipitation is on the surface;</li>
-            <li>Otherwise, recorded at 18z, 00z, and 06z ONLY when some form of solid precipitation is on
-            the surface AND precipitation, of any kind, has occurred at the station within the current
-            synoptic period;</li>
-        </ul>
+        <h4>Section I</h4>
 
-        <h5>931ss: MANOBS 12.4.11 (Para: 2) and MANOBS 12.4.11.3.5 (Encoding Table)</h5>
-        <ul>
-            <li>Depth of newly fallen snow, prior to any melting (basically, what would have been had
-            melting not occurred), transmitted in whole centimeters, the rounded value taken from
-            column 9;</li>
-        </ul>
+            <p><strong>Col. 9:</strong> MANOBS 13.3.8</p>
+            <ul>
+                <li>6hr snowfall amount, taken from the ground or approved weaver board, recorded in
+                centimeters and tenths;</li>
+                <li>When there is less than a measurable amount (&lt; 0.2cm), but snow was observed
+                within the current synoptic period, the amount SHALL be recorded as "TR";</li>
+                <li>Lastly, the amount SHALL be recorded as "0" for none;</li>
+            </ul>
 
-        <h5>1ssss:</h5>
-        <ul>
-            <li>Snowfall, in centimeters and tenths, from column 9;</li>
-        </ul>
+            <p><strong>Col. 10:</strong> MANOBS 13.3.9</h5>
+            <ul>
+                <li>6hr water equivalent, taken from the Nipher Snow Gauge, recorded in millimeters and
+                tenths using a graduated cylinder;</li>
+                <li>For stations without a snow gauge, the water-equivalent amount SHALL be estimated (snow
+                in cm / 10);</li>
+            </ul>
 
-        <h5>2SwSwSwSw:</h5>
-        <ul>
-            <li>Snow Water Equivalent, in millimeters and tenths, from column 10;</li>
-        </ul>
+            <p><strong>Col. 11:</strong> MANOBS 13.3.10</h5>
+            <ul>
+                <li>6hr rainfall amount, taken from Type B Rain Gauge, recorded in millimeters and tenths;</li>
+            </ul>
 
-        <br />
+            <p><strong>Col. 12:</strong> MANOBS 13.3.11</h5>
+            <ul>
+                <li>Total 6hr precipitation amount, all types, recorded in millimeters and tenths;</li>
+            </ul>
 
-<h3>Equipment Procedures</h3>
+            <p><strong>Col. 13:</strong> MANOBS 13.3.12</h5>
+            <ul>
+                <li>Total 24hr precipitation amount, all types, recorded in millimeters and tenths;</li>
+            </ul>
 
-        <h5 >Nipher Snow Gauge:</h5>
+            <p><strong>Col. 14:</strong> MANOBS 13.3.13</h5>
+            <ul>
+                <li>Depth of snow on the ground, recorded in whole centimeters, rounded to the nearest;</li>
+            </ul>
+
+        <h4>Section III</h4>
+
+            <p><strong>4E'sss:</strong> MANOBS 12.4.4</h5>
+            <ul>
+                <li>Depth of snow on the ground, in whole centimeters, and taken from column 14;</li>
+                <li>This group SHALL be recorded at 12z when snow, ice, or any solid precipitation is present
+                on the surface, even in trace amounts;</li>
+                <li>Otherwise, recorded at 18z, 00z, and 06z ONLY when some form of solid precipitation is on
+                the surface AND precipitation, of any kind, has occurred at the station within the current
+                synoptic period;</li>
+                <li>At 18z, 00z, and 06z, if there is solid precipitation of any form present on the surface,
+                however, precipitation has not occurred at the station within the current synoptic period,
+                this group SHALL be omitted</li>
+            </ul>
+
+            <p><strong>931ss:</strong> MANOBS 12.4.11 (Para: 2) and MANOBS 12.4.11.3.5 (Encoding Table)</h5>
+            <ul>
+                <li>Depth of newly fallen snow for the current synoptic period, prior to any melting, transmitted
+                in whole centimeters (taken from column 9 and rounded to the nearest whole centimeter);</li>
+                <li>Essentially, the accumulative sum of the recorded hourly amounts ('/Sss/' before rounding)
+                within the current synoptic period</li>
+            </ul>
+
+            <p><strong>1ssss:</strong>
+            <ul>
+                <li>24hr Snowfall, in centimeters and tenths, from column 9;</li>
+            </ul>
+
+            <p><strong>2SwSwSwSw:</strong>
+            <ul>
+                <li>24hr Snow Water Equivalent, in millimeters and tenths, from column 10;</li>
+            </ul>
+
+            <br></br>
+
+    <h3>Equipment Procedures</h3>
+
+        <p><strong>Nipher Snow Gauge:</strong>
         <ul>
             <li>Coming soon.</li>
         </ul>
 
-        <h5>Type B Rain Gauge:</h5>
+        <p><strong>Type B Rain Gauge:</strong>
         <ul>
             <li>Coming soon.</li>
         </ul>
 
-        <h5>Tipping Bucket Rain Gauge:</h5>
+        <p><strong>Tipping Bucket Rain Gauge:</strong>
         <ul>
             <li>Coming soon.</li>
         </ul>
 
-        <h5>Weaver Board:</h5>
+        <p><strong>Weaver Board:</strong>
         <ul>
             <li>Coming soon.</li>
         </ul>
 
-        <h5>Snow Ruler:</h5>
+        <p><strong>Snow Ruler:</strong>
         <ul>
             <li>Coming soon.</li>
         </ul>
 
-        <h5>Graduated Cylinder:</h5>
+        <p><strong>Graduated Cylinder:</strong>
         <ul>
             <li>Coming soon.</li>
         </ul>
